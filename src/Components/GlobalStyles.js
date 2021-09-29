@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
     body{
         max-width:1380px;
         margin:0 auto;
+        padding:10px;
     }
     select {
     -o-appearance: none;
@@ -25,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     appearance: none;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
-    width: 140px;
+    width: 120px;
     height: 35px;
     background: url("https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png")
         calc(100% - 5px) center no-repeat;
