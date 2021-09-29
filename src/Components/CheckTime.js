@@ -27,7 +27,7 @@ const Title = styled.h1`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 20px;
 `;
 const Input = styled.input`
   all: unset;
@@ -46,7 +46,6 @@ const Button = styled.button`
 `;
 const Link = styled.a`
   font-size: 17px;
-  margin-bottom: 20px;
   color: red;
 `;
 
