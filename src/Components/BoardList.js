@@ -14,7 +14,7 @@ const Column = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 10px;
   border-bottom: 1px solid #b7bdb9;
 `;
 const Date = styled.span``;
