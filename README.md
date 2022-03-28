@@ -52,6 +52,13 @@
 ---
 
 <details>
+  <summary> 컷버튼 클릭 시 시간 빠른 순 자동 정렬 </summary>
+    <img width="700" src="img/autosort.gif"/>  
+</details>
+
+---
+
+<details>
   <summary> 초기화 </summary>
     <img width="700" src="img/reset.gif"/>  
 </details>

@@ -13,6 +13,7 @@ const Main = styled.div`
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
+  padding: 10px;
 `;
 
 const Img = styled.img`
@@ -21,17 +22,16 @@ const Img = styled.img`
 
 const Paragraph = styled.p`
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
+  white-space: pre;
 `;
 
-const NotRecord = () => (
+const NotRecord = ({ check }) => (
   <Container>
     <Main>
       <Img src="https://svgsilh.com/svg/153391.svg" />
       <Paragraph>
-        기록이 없습니다.
-        <br />
-        기록탭으로 가서 기록을 진행하세요!
+        {check ? "맵이나 아이템을 선택한 후 기록해보세요!" : `기록이 없습니다.\n기록탭으로 가서 기록을 진행하세요!`}
       </Paragraph>
     </Main>
   </Container>

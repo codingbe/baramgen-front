@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import CutCard from "./CutCard";
+import NotRecord from "./NotRecord";
 
 const Grid = styled.div`
   display: grid;
@@ -59,23 +60,24 @@ const Cut = ({ dbs, deleteDB, checkTime, setDbs }) => {
       func(time, name, gentime, item);
     }
   };
-  return (
+  return dbs ? (
     <Grid>
-      {dbs &&
-        dbs.map((db) => (
-          <CutCard
-            db={db}
-            calEstimateByCheck={calEstimateByCheck}
-            calEstimateByCut={calEstimateByCut}
-            calGentime={calGentime}
-            createTimeStamp={createTimeStamp}
-            handleSubmit={handleSubmit}
-            key={Math.random() * 12}
-            deleteDB={deleteDB}
-            setDbs={setDbs}
-          />
-        ))}
+      {dbs.map((db) => (
+        <CutCard
+          db={db}
+          calEstimateByCheck={calEstimateByCheck}
+          calEstimateByCut={calEstimateByCut}
+          calGentime={calGentime}
+          createTimeStamp={createTimeStamp}
+          handleSubmit={handleSubmit}
+          key={Math.random() * 12}
+          deleteDB={deleteDB}
+          setDbs={setDbs}
+        />
+      ))}
     </Grid>
+  ) : (
+    <NotRecord check={true} />
   );
 };
 
