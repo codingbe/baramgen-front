@@ -11,14 +11,13 @@ const Grid = styled.div`
 `;
 
 const Cut = ({ dbs, deleteDB, checkTime }) => {
+  const DELAY = 1200000;
   const createTimeStamp = (time) => {
     const date = new Date(time);
     const hours = date.getHours();
     const minutes = date.getMinutes();
     if (time > 0) {
-      return `${hours < 10 ? `0${hours}` : hours}:${
-        minutes < 10 ? `0${minutes}` : minutes
-      }`;
+      return `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
     }
   };
 
@@ -27,7 +26,7 @@ const Cut = ({ dbs, deleteDB, checkTime }) => {
     const time = checkTime + gentime * count;
     const nextTime = checkTime + gentime * (count + 1);
     const current = Date.now();
-    if (time + 3000000 > current) {
+    if (time + DELAY > current) {
       return createTimeStamp(time);
     } else {
       return createTimeStamp(nextTime);
@@ -39,7 +38,7 @@ const Cut = ({ dbs, deleteDB, checkTime }) => {
     const time = cutTime + gentime * count;
     const nextTime = cutTime + gentime * (count + 1);
     const current = Date.now();
-    if (time + 3000000 > current) {
+    if (time + DELAY > current) {
       return createTimeStamp(time);
     } else {
       return createTimeStamp(nextTime);
@@ -49,9 +48,7 @@ const Cut = ({ dbs, deleteDB, checkTime }) => {
   const calGentime = (gentime) => {
     const hours = Math.floor(gentime / 1000 / 60 / 60);
     const minutes = gentime / 1000 / 60 - 60 * hours;
-    return `${hours < 10 ? `0${hours}` : hours}:${
-      minutes < 10 ? `0${minutes}` : minutes
-    }`;
+    return `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
   };
 
   const handleSubmit = (e, func, name, gentime, item) => {

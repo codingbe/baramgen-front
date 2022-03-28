@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { currentTime } from "../util";
 
 const Card = styled.div`
   border: 1px solid black;
@@ -59,27 +60,8 @@ const DeleteBtn = styled.span`
 `;
 
 let arr = [];
-const tempCurrent = new Date();
-const tempYear = tempCurrent.getFullYear();
-const tempMonth = tempCurrent.getMonth() + 1;
-const tempDate = tempCurrent.getDate();
-const tempHours = tempCurrent.getHours();
-const tempMinutes = tempCurrent.getMinutes();
-const tempTime = `${tempYear}-${tempMonth < 10 ? `0${tempMonth}` : tempMonth}-${
-  tempDate < 10 ? `0${tempDate}` : tempDate
-}T${tempHours < 10 ? `0${tempHours}` : tempHours}:${
-  tempMinutes < 10 ? `0${tempMinutes}` : tempMinutes
-}`;
 
-const CutCard = ({
-  db,
-  calEstimateByCheck,
-  calEstimateByCut,
-  calGentime,
-  createTimeStamp,
-  handleSubmit,
-  deleteDB,
-}) => {
+const CutCard = ({ db, calEstimateByCheck, calEstimateByCut, calGentime, createTimeStamp, handleSubmit, deleteDB }) => {
   const [cutTime, setCutTime] = useState(null);
   const [remainTime, setRemainTime] = useState(db.nextGentime - Date.now());
   const [currentNextGentime, setCurrentNextGentime] = useState(null);
@@ -121,9 +103,9 @@ const CutCard = ({
     const minutes = Math.floor(remainTime / 1000 / 60 - 60 * hours);
     const seconds = new Date(remainTime).getSeconds();
     if (remainTime > 0) {
-      return `${hours < 10 ? `0${hours}` : hours}:${
-        minutes < 10 ? `0${minutes}` : minutes
-      }:${seconds < 10 ? `0${seconds}` : seconds}`;
+      return `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${
+        seconds < 10 ? `0${seconds}` : seconds
+      }`;
     } else {
       return `출현중...`;
     }
@@ -154,25 +136,15 @@ const CutCard = ({
       <Column>
         <SubColumn>
           <SubTitle>예상젠</SubTitle>
-          <Span>
-            {db.cutTime
-              ? calEstimateByCut(db.cutTime, db.gentime)
-              : calEstimateByCheck(db.gentime)}
-          </Span>
+          <Span>{db.cutTime ? calEstimateByCut(db.cutTime, db.gentime) : calEstimateByCheck(db.gentime)}</Span>
         </SubColumn>
         <SubColumn>
           <SubTitle>컷타임</SubTitle>
-          <Span>
-            {cutTime ? createTimeStamp(cutTime) : createTimeStamp(db.cutTime)}
-          </Span>
+          <Span>{cutTime ? createTimeStamp(cutTime) : createTimeStamp(db.cutTime)}</Span>
         </SubColumn>
         <SubColumn>
           <SubTitle>다음젠</SubTitle>
-          <Span>
-            {cutTime
-              ? createTimeStamp(cutTime + db.gentime)
-              : createTimeStamp(db.cutTime + db.gentime)}
-          </Span>
+          <Span>{cutTime ? createTimeStamp(cutTime + db.gentime) : createTimeStamp(db.cutTime + db.gentime)}</Span>
         </SubColumn>
         <SubColumn>
           <SubTitle>젠타임</SubTitle>
@@ -193,10 +165,9 @@ const CutCard = ({
           onSubmit={(e) => {
             handleSubmit(e, cutEvent, db.name, db.gentime, db.item);
             setFormCheck(false);
-          }}
-        >
+          }}>
           <Span>잡은시간</Span>
-          <Submit type="datetime-local" defaultValue={tempTime} />
+          <Submit type="datetime-local" defaultValue={currentTime()} />
           <Button type="submit">입력</Button>
         </Form>
       ) : null}
@@ -204,8 +175,7 @@ const CutCard = ({
         onClick={() => {
           cutEvent("_", db.name, db.gentime, db.item);
           setFormCheck(false);
-        }}
-      >
+        }}>
         CUT
       </Button>
     </Card>

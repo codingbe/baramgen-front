@@ -1,16 +1,5 @@
 import styled from "styled-components";
-
-const tempCurrent = new Date();
-const tempYear = tempCurrent.getFullYear();
-const tempMonth = tempCurrent.getMonth() + 1;
-const tempDate = tempCurrent.getDate();
-const tempHours = tempCurrent.getHours();
-const tempMinutes = tempCurrent.getMinutes();
-const tempTime = `${tempYear}-${tempMonth < 10 ? `0${tempMonth}` : tempMonth}-${
-  tempDate < 10 ? `0${tempDate}` : tempDate
-}T${tempHours < 10 ? `0${tempHours}` : tempHours}:${
-  tempMinutes < 10 ? `0${tempMinutes}` : tempMinutes
-}`;
+import { currentTime } from "../util";
 
 const Container = styled.div`
   text-align: center;
@@ -49,20 +38,19 @@ const Link = styled.a`
   color: red;
 `;
 
-const CheckTime = ({ insertCheckTime }) => (
-  <Container>
-    <Title>최근 점검시간을 입력해주세요.</Title>
-    <Link
-      href="https://forum.nexon.com/baramy/board_list?board=259"
-      target="_blank"
-    >
-      참고링크
-    </Link>
-    <Form onSubmit={insertCheckTime}>
-      <Input type="datetime-local" defaultValue={tempTime} />
-      <Button type="submit">입력</Button>
-    </Form>
-  </Container>
-);
+const CheckTime = ({ insertCheckTime }) => {
+  return (
+    <Container>
+      <Title>최근 점검시간을 입력해주세요.</Title>
+      <Link href="https://forum.nexon.com/baramy/board_list?board=259" target="_blank">
+        참고링크
+      </Link>
+      <Form onSubmit={insertCheckTime}>
+        <Input type="datetime-local" defaultValue={currentTime()} />
+        <Button type="submit">입력</Button>
+      </Form>
+    </Container>
+  );
+};
 
 export default CheckTime;

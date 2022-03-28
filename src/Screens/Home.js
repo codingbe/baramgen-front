@@ -1,13 +1,12 @@
 import CheckTime from "Components/CheckTime";
 import Cut from "Components/Cut";
+import NotRecord from "Components/NotRecord";
 import { useState } from "react";
 import { useEffect } from "react";
 
 const Home = ({ match }) => {
   const [dbs, setDbs] = useState([]);
-  const [checkTime, setCheckTime] = useState(
-    Number(localStorage.getItem("checkTime"))
-  );
+  const [checkTime, setCheckTime] = useState(Number(localStorage.getItem("checkTime")));
 
   const deleteDB = (e) => {
     const {
@@ -29,11 +28,15 @@ const Home = ({ match }) => {
 
   useEffect(() => {
     const temp = JSON.parse(localStorage.getItem("dbs"));
-    setDbs(temp);
+    setDbs(() => (temp ? temp : []));
   }, [match]);
 
   return checkTime ? (
-    <Cut dbs={dbs} deleteDB={deleteDB} />
+    dbs.length !== 0 ? (
+      <Cut dbs={dbs} deleteDB={deleteDB} />
+    ) : (
+      <NotRecord />
+    )
   ) : (
     <CheckTime insertCheckTime={insertCheckTime} />
   );
