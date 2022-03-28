@@ -10,7 +10,7 @@ const Grid = styled.div`
   padding: 10px 0;
 `;
 
-const Cut = ({ dbs, deleteDB, checkTime }) => {
+const Cut = ({ dbs, deleteDB, checkTime, setDbs }) => {
   const DELAY = 1200000;
   const createTimeStamp = (time) => {
     const date = new Date(time);
@@ -59,7 +59,6 @@ const Cut = ({ dbs, deleteDB, checkTime }) => {
       func(time, name, gentime, item);
     }
   };
-
   return (
     <Grid>
       {dbs &&
@@ -73,6 +72,7 @@ const Cut = ({ dbs, deleteDB, checkTime }) => {
             handleSubmit={handleSubmit}
             key={Math.random() * 12}
             deleteDB={deleteDB}
+            setDbs={setDbs}
           />
         ))}
     </Grid>

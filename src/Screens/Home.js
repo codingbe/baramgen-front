@@ -28,12 +28,16 @@ const Home = ({ match }) => {
 
   useEffect(() => {
     const temp = JSON.parse(localStorage.getItem("dbs"));
-    setDbs(() => (temp ? temp : []));
+    if (temp) {
+      setDbs(temp);
+    } else {
+      localStorage.setItem("dbs", JSON.stringify([]));
+    }
   }, [match]);
 
   return checkTime ? (
     dbs.length !== 0 ? (
-      <Cut dbs={dbs} deleteDB={deleteDB} />
+      <Cut dbs={dbs} deleteDB={deleteDB} setDbs={setDbs} />
     ) : (
       <NotRecord />
     )

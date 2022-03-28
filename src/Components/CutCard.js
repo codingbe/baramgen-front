@@ -59,13 +59,33 @@ const DeleteBtn = styled.span`
   font-size: 19px;
 `;
 
-let arr = [];
-
-const CutCard = ({ db, calEstimateByCheck, calEstimateByCut, calGentime, createTimeStamp, handleSubmit, deleteDB }) => {
+const CutCard = ({
+  db,
+  calEstimateByCheck,
+  calEstimateByCut,
+  calGentime,
+  createTimeStamp,
+  handleSubmit,
+  deleteDB,
+  setDbs,
+}) => {
   const [cutTime, setCutTime] = useState(null);
   const [remainTime, setRemainTime] = useState(db.nextGentime - Date.now());
   const [currentNextGentime, setCurrentNextGentime] = useState(null);
   const [formCheck, setFormCheck] = useState(true);
+
+  const saveDB = (obj) => {
+    const db = JSON.parse(localStorage.getItem("dbs"));
+    const index = db.findIndex((data) => data.name === obj.name);
+    if (index !== -1) {
+      db[index] = obj;
+    } else {
+      db.push(obj);
+    }
+    db.sort((a, b) => a.nextGentime - b.nextGentime);
+    localStorage.setItem("dbs", JSON.stringify(db));
+    setDbs && setDbs(db);
+  };
 
   const cutEvent = (input, name, gentime, item) => {
     let cutTime;
@@ -82,20 +102,10 @@ const CutCard = ({ db, calEstimateByCheck, calEstimateByCut, calGentime, createT
       item,
       nextGentime: cutTime + gentime,
     };
-    if (arr.length > 0) {
-      const index = arr.findIndex((ar) => ar.name === obj.name);
-      if (index !== -1) {
-        arr[index] = obj;
-      } else {
-        arr.push(obj);
-      }
-    } else {
-      arr.push(obj);
-    }
-    arr.sort((a, b) => a.nextGentime - b.nextGentime);
-    localStorage.setItem("dbs", JSON.stringify(arr));
+    saveDB(obj);
     setCutTime(cutTime);
     setCurrentNextGentime(obj.nextGentime);
+    setRemainTime(obj.nextGentime - Date.now() - 100);
   };
 
   const timer = () => {
@@ -121,7 +131,6 @@ const CutCard = ({ db, calEstimateByCheck, calEstimateByCut, calGentime, createT
     }, 1000);
     return () => {
       clearInterval(temp);
-      arr = JSON.parse(localStorage.getItem("dbs"));
     };
   }, [db.nextGentime, remainTime, currentNextGentime]);
 

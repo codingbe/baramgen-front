@@ -47,14 +47,9 @@ const Record = () => {
       setCheckTime(temp);
     }
   }, [getData]);
-
   return checkTime ? (
     <>
-      <RecordHeader
-        maps={list.maps}
-        items={list.items}
-        handleChange={handleChange}
-      />
+      <RecordHeader maps={list.maps} items={list.items} handleChange={handleChange} />
       <Cut dbs={dbs} checkTime={checkTime} />
     </>
   ) : (
