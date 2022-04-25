@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link, withRouter } from "react-router-dom";
+import Modal from "./Modal";
 
 const Header = styled.header`
   display: flex;
@@ -31,43 +32,46 @@ const NavLink = styled(Link)`
 
 // eslint-disable-next-line
 export default withRouter(({ location: { pathname }, history }) => (
-  <Header>
-    <Logo to="/">바연젠</Logo>
-    <Ul>
-      <Li>
-        <NavLink to="/" current={pathname === "/" ? "red" : "inherit"}>
-          홈
-        </NavLink>
-      </Li>
-      <Li>
-        <NavLink
-          to="/record"
-          current={pathname === "/record" ? "red" : "inherit"}
+  <>
+    <Modal />
+    <Header>
+      <Logo to="/">바연젠</Logo>
+      <Ul>
+        <Li>
+          <NavLink to="/" current={pathname === "/" ? "red" : "inherit"}>
+            홈
+          </NavLink>
+        </Li>
+        <Li>
+          <NavLink
+            to="/record"
+            current={pathname === "/record" ? "red" : "inherit"}
+          >
+            기록
+          </NavLink>
+        </Li>
+        <Li>
+          <NavLink
+            to="/notice"
+            current={pathname === "/notice" ? "red" : "inherit"}
+          >
+            공지사항
+          </NavLink>
+        </Li>
+        <Li
+          onClick={() => {
+            const check = window.confirm(
+              "초기화를 하시겠습니까?\n모든정보가 사라집니다."
+            );
+            if (check) {
+              localStorage.clear();
+              window.location.replace("/");
+            }
+          }}
         >
-          기록
-        </NavLink>
-      </Li>
-      <Li>
-        <NavLink
-          to="/notice"
-          current={pathname === "/notice" ? "red" : "inherit"}
-        >
-          공지사항
-        </NavLink>
-      </Li>
-      <Li
-        onClick={() => {
-          const check = window.confirm(
-            "초기화를 하시겠습니까?\n모든정보가 사라집니다."
-          );
-          if (check) {
-            localStorage.clear();
-            window.location.replace("/");
-          }
-        }}
-      >
-        초기화
-      </Li>
-    </Ul>
-  </Header>
+          초기화
+        </Li>
+      </Ul>
+    </Header>
+  </>
 ));
