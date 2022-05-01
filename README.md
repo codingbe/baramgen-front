@@ -10,7 +10,7 @@
 
 ## ✨ Link
 
-[https://bayeongen.shop](https://bayeongen.shop)
+<a href="https://bayeongen.shop" target="_blank">https://bayeongen.shop</a>
 
 </br>
 
