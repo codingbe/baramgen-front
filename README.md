@@ -10,7 +10,7 @@
 
 ## ✨ Link
 
-[바연젠](https://bayeongen.shop)
+[https://bayeongen.shop](https://bayeongen.shop)
 
 </br>
 
