@@ -1,7 +1,7 @@
 ---
 name: Dev Log
 about: 개발일지 템플릿
-title: "[✍️ Dev Log] 이름 / 2022-00-00 "
+title: "[Dev Log] 이름 / 2022-00-00 "
 labels: Dev Log
 assignees: ''
 

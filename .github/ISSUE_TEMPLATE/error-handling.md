@@ -1,8 +1,8 @@
 ---
 name: Error Handling
 about: 에러 핸들링 템플릿
-title: ''
-labels: In Progress
+title: "[ERROR]"
+labels: To Do
 assignees: ''
 
 ---

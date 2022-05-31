@@ -1,7 +1,7 @@
 ---
 name: Task Card
 about: "\b개발과정 템플릿"
-title: ''
+title: "[TASK]"
 labels: To Do
 assignees: ''
 
