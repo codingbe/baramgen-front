@@ -1,7 +1,7 @@
 ---
 name: Error Handling
 about: 에러 핸들링 템플릿
-title: "[ERROR]"
+title: "[Error]"
 labels: To Do
 assignees: ''
 
