@@ -2,9 +2,14 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useState } from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { userState } from "../recoil";
+import { requestLogin, requestLogout } from "../utils";
 
 export default function Header() {
   const [visible, setVisible] = useState<Boolean>(false);
+  const [token, setToken] = useRecoilState(userState);
+
   return (
     <>
       <header className="h-[60px] shadow--bottom fixed top-0 w-full font-bold bg-slate-50 px-4">
@@ -31,7 +36,23 @@ export default function Header() {
               </ul>
             </nav>
           </div>
-          <button className="font-bold">로그인</button>
+          {token ? (
+            <button
+              className="font-bold"
+              onClick={() => {
+                if (token) requestLogout(setToken);
+              }}
+            >
+              로그아웃
+            </button>
+          ) : (
+            <a
+              className="w-[55.37px] text-center"
+              href={`https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}&redirect_uri=${process.env.NEXT_PUBLIC_URL}/signin&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email`}
+            >
+              로그인
+            </a>
+          )}
         </div>
       </header>
       <nav
