@@ -1,5 +1,8 @@
+import { SetterOrUpdater } from "recoil";
+import { TokenState, UserInfo } from "./typeDefs";
+
 export async function requestLogin(code: string | null) {
-  const { token }: { token: string } = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/users`, {
+  const { token }: { token: string; userInfo: UserInfo } = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/users`, {
     method: "POST",
     body: JSON.stringify({ code }),
     headers: {
@@ -7,11 +10,12 @@ export async function requestLogin(code: string | null) {
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
   }).then((res) => res.ok && res.json());
+
   localStorage.setItem("token", token);
   return token;
 }
 
-export function requestLogout(setToken: any) {
+export function requestLogout(setToken: SetterOrUpdater<TokenState>) {
   localStorage.removeItem("token");
   setToken(null);
 }

@@ -1,14 +1,20 @@
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { useState } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { userState } from "../recoil";
-import { requestLogin, requestLogout } from "../utils";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { useRecoilState } from "recoil";
+import { tokenState, userState } from "../utils/recoil";
+import { requestLogout } from "../utils/utils";
 
 export default function Header() {
   const [visible, setVisible] = useState<Boolean>(false);
-  const [token, setToken] = useRecoilState(userState);
+  const [token, setToken] = useRecoilState(tokenState);
+  const route = useRouter();
+
+  useEffect(() => {
+    setToken(localStorage.getItem("token"));
+  });
 
   return (
     <>
@@ -23,7 +29,7 @@ export default function Header() {
           </div>
           <div className="flex items-center justify-center">
             <h1 className="text-2xl absolute md:relative">
-              <Link href="/">바연젠</Link>
+              <Link href="/">Logo</Link>
             </h1>
             <nav className="md:flex items-center hidden">
               <ul className="flex">
@@ -40,7 +46,8 @@ export default function Header() {
             <button
               className="font-bold"
               onClick={() => {
-                if (token) requestLogout(setToken);
+                requestLogout(setToken);
+                route.push("/");
               }}
             >
               로그아웃
@@ -54,21 +61,21 @@ export default function Header() {
             </a>
           )}
         </div>
+        <nav
+          className={`${
+            visible ? "block" : "hidden"
+          } md:hidden absolute w-full bg-slate-50 flex justify-center font-bold left-0 shadow-bottom p-2`}
+        >
+          <ul>
+            <li className="mb-3" onClick={() => setVisible(false)}>
+              <Link href="/record">기록</Link>
+            </li>
+            <li onClick={() => setVisible(false)}>
+              <Link href="/community">커뮤니티</Link>
+            </li>
+          </ul>
+        </nav>
       </header>
-      <nav
-        className={`${
-          visible ? "block" : "hidden"
-        } md:hidden absolute w-full bg-slate-50 shadow--bottom flex justify-center font-bold p-2`}
-      >
-        <ul>
-          <li className="mb-3" onClick={() => setVisible(false)}>
-            <Link href="/record">기록</Link>
-          </li>
-          <li onClick={() => setVisible(false)}>
-            <Link href="/community">커뮤니티</Link>
-          </li>
-        </ul>
-      </nav>
     </>
   );
 }
