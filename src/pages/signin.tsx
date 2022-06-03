@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useSetRecoilState } from "recoil";
-import { userState } from "../recoil";
-import { getCode, requestLogin } from "../utils";
+import { tokenState } from "../utils/recoil";
+import { getCode, requestLogin } from "../utils/utils";
 
 export default function Signin() {
-  const setToken = useSetRecoilState(userState);
+  const setToken = useSetRecoilState(tokenState);
   const route = useRouter();
 
   async function fetchData() {
