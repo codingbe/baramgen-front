@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import CutCard from "./CutCard";
 import NotRecord from "./NotRecord";
@@ -8,7 +9,7 @@ const Grid = styled.div`
   grid-auto-rows: 250px;
   text-align: center;
   gap: 10px;
-  padding: 10px 0;
+  padding: 10px;
 `;
 
 const Cut = ({ dbs, deleteDB, checkTime, setDbs }) => {

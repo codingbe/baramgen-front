@@ -1,6 +1,11 @@
+import React from "react";
 import styled from "styled-components";
 
-const Lists = styled("select")``;
+const Lists = styled("select")`
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+`;
 const List = styled("option")``;
 
 const Select = ({ data, title, handleChange }) => (

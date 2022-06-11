@@ -1,3 +1,5 @@
+export const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 export const currentTime = () => {
   const tempCurrent = new Date();
   const tempYear = tempCurrent.getFullYear();

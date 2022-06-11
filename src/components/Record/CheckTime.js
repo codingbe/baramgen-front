@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { currentTime } from "../util";
+import React from "react";
+import { currentTime } from "../../etc/utils";
 
 const Container = styled.div`
   text-align: center;

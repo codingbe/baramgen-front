@@ -1,9 +1,10 @@
-import RecordHeader from "Components/RecordHeader";
-import list from "db/list.json";
+import React from "react";
+import RecordHeader from "../components/Record/RecordHeader";
+import list from "../db/list.json";
 import { useCallback, useState, useEffect } from "react";
-import datas from "db/data.json";
-import Cut from "Components/Cut";
-import CheckTime from "Components/CheckTime";
+import datas from "../db/data.json";
+import Cut from "../components/Record/Cut";
+import CheckTime from "../components/Record/CheckTime";
 
 const Record = () => {
   const [keyword, setKeyword] = useState(null);
