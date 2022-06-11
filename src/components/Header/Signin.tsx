@@ -27,7 +27,7 @@ export default function Signin() {
 
   async function requestLogin(code: string) {
     if (SERVER_URL) {
-      const { token }: { token: string } = await fetch(`${SERVER_URL}/users`, {
+      const { token }: { token: string } = await fetch(`${SERVER_URL}users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
