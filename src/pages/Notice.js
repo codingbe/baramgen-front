@@ -1,5 +1,6 @@
-import BoardList from "Components/BoardList";
-import { data } from "db/notice";
+import React from "react";
+import BoardList from "../components/BoardList";
+import { data } from "../db/notice";
 
 const Notice = () => {
   const notices = data;

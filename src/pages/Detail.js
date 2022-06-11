@@ -1,5 +1,5 @@
-import Board from "Components/Board";
-import { data } from "db/notice";
+import Board from "../components/Board";
+import { data } from "../db/notice";
 import { useEffect, useState } from "react";
 
 const Detail = ({

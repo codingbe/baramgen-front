@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const Footer = styled.footer`
@@ -8,7 +9,9 @@ const Footer = styled.footer`
   width: 320px;
   margin: 0 auto;
 `;
-const Content = styled.p``;
+const Content = styled.p`
+  padding: 10px;
+`;
 
 // eslint-disable-next-line
 export default () => {

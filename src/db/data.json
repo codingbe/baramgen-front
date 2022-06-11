@@ -1,1372 +1,1372 @@
 {
-   "data": [
-      {
-         "id": "gugnae",
-         "map": "국내성",
-         "boss": "인형술사",
-         "item": "백화검",
-         "name": "국내인형굴0",
-         "gentime": 10020000
-      },
-      {
-         "id": "buyeo",
-         "map": "부여성",
-         "boss": "인형술사",
-         "item": "백화검",
-         "name": "부여인형굴10",
-         "gentime": 10020000
-      },
-      {
-         "id": "gugnae",
-         "map": "국내성",
-         "boss": "도깨비왕",
-         "item": "도깨비방망이",
-         "name": "물망동7",
-         "gentime": 10020000
-      },
-      {
-         "id": "buyeo",
-         "map": "부여성",
-         "boss": "도깨비왕",
-         "item": "도깨비방망이",
-         "name": "백륜동10",
-         "gentime": 10020000
-      },
-      {
-         "id": "gugnae",
-         "map": "국내성",
-         "boss": "도깨비왕",
-         "item": "도깨비방망이",
-         "name": "물망동 이면7",
-         "gentime": 10020000
-      },
-      {
-         "id": "buyeo",
-         "map": "부여성",
-         "boss": "도깨비왕",
-         "item": "도깨비방망이",
-         "name": "백륜동 이면10",
-         "gentime": 10020000
-      },
-      {
-         "id": "gugnae",
-         "map": "국내성",
-         "boss": "일본밀정두목",
-         "item": "백옥노리개",
-         "name": "국내비밀세작10",
-         "gentime": 10020000
-      },
-      {
-         "id": "buyeo",
-         "map": "부여성",
-         "boss": "일본밀정두목",
-         "item": "백옥노리개",
-         "name": "부여비밀세작10",
-         "gentime": 10020000
-      },
-      {
-         "id": "gugnae",
-         "map": "국내성",
-         "boss": "힘쎈독충",
-         "item": "사귀보조장비",
-         "name": "국내흉가9 비밀통로",
-         "gentime": 7200000
-      },
-      {
-         "id": "buyeo",
-         "map": "부여성",
-         "boss": "힘쎈노인",
-         "item": "사귀보조장비",
-         "name": "부여흉가9 비밀통로",
-         "gentime": 7200000
-      },
-      {
-         "id": "sanjeog",
-         "map": "산적굴",
-         "boss": "산적부두목",
-         "item": "달빛도파",
-         "name": "동2-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "sanjeog",
-         "map": "산적굴",
-         "boss": "산적부두목",
-         "item": "달빛도파",
-         "name": "동3-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "sanjeog",
-         "map": "산적굴",
-         "boss": "겁살파수",
-         "item": "달빛날",
-         "name": "서2-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "sanjeog",
-         "map": "산적굴",
-         "boss": "겁살파수",
-         "item": "달빛날",
-         "name": "서3-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "sanjeog",
-         "map": "산적굴",
-         "boss": "겁살파수꾼",
-         "item": "달빛돌",
-         "name": "남2-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "sanjeog",
-         "map": "산적굴",
-         "boss": "겁살파수꾼",
-         "item": "달빛돌",
-         "name": "남3-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "sanjeog",
-         "map": "산적굴",
-         "boss": "주비",
-         "item": "달빛기운",
-         "name": "북2-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "sanjeog",
-         "map": "산적굴",
-         "boss": "주비",
-         "item": "달빛기운",
-         "name": "북3-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "pogsanjeog",
-         "map": "폭산적굴",
-         "boss": "산적부두목",
-         "item": "달빛도파",
-         "name": "폭동2-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "pogsanjeog",
-         "map": "폭산적굴",
-         "boss": "산적부두목",
-         "item": "달빛도파",
-         "name": "폭동3-9",
-         "gentime": 14400000
-      },
-      {
-         "id": "pogsanjeog",
-         "map": "폭산적굴",
-         "boss": "겁살파수",
-         "item": "달빛날",
-         "name": "폭서2-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "pogsanjeog",
-         "map": "폭산적굴",
-         "boss": "겁살파수",
-         "item": "달빛날",
-         "name": "폭서3-9",
-         "gentime": 14400000
-      },
-      {
-         "id": "pogsanjeog",
-         "map": "폭산적굴",
-         "boss": "겁살파수꾼",
-         "item": "달빛돌",
-         "name": "폭남2-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "pogsanjeog",
-         "map": "폭산적굴",
-         "boss": "겁살파수꾼",
-         "item": "달빛돌",
-         "name": "폭남3-9",
-         "gentime": 14400000
-      },
-      {
-         "id": "pogsanjeog",
-         "map": "폭산적굴",
-         "boss": "주비",
-         "item": "달빛기운",
-         "name": "폭북2-9",
-         "gentime": 10800000
-      },
-      {
-         "id": "pogsanjeog",
-         "map": "폭산적굴",
-         "boss": "주비",
-         "item": "달빛기운",
-         "name": "폭북3-9",
-         "gentime": 14400000
-      },
-      {
-         "id": "bugbang",
-         "map": "북방대초원",
-         "boss": "맹독화군",
-         "item": "오선오뢰창",
-         "name": "북방27",
-         "gentime": 3600000
-      },
-      {
-         "id": "bugbang",
-         "map": "북방대초원",
-         "boss": "맹독화군",
-         "item": "오선오뢰창",
-         "name": "북방28",
-         "gentime": 3600000
-      },
-      {
-         "id": "bugbang",
-         "map": "북방대초원",
-         "boss": "맹독화군",
-         "item": "오선오뢰창",
-         "name": "북방29",
-         "gentime": 3600000
-      },
-      {
-         "id": "bugbang",
-         "map": "북방대초원",
-         "boss": "맹독화군",
-         "item": "오선오뢰창",
-         "name": "북방30",
-         "gentime": 3600000
-      },
-      {
-         "id": "bugbang",
-         "map": "북방대초원",
-         "boss": "철갑대사",
-         "item": "인풍죽선",
-         "name": "북방38",
-         "gentime": 3600000
-      },
-      {
-         "id": "bugbang",
-         "map": "북방대초원",
-         "boss": "철갑대사",
-         "item": "인풍죽선",
-         "name": "북방39",
-         "gentime": 3600000
-      },
-      {
-         "id": "bugbang",
-         "map": "북방대초원",
-         "boss": "철갑대사",
-         "item": "인풍죽선",
-         "name": "북방40",
-         "gentime": 3600000
-      },
-      {
-         "id": "baegho",
-         "map": "백호",
-         "boss": "백호왕",
-         "item": "백호무기",
-         "name": "천상계제이계11",
-         "gentime": 21600000
-      },
-      {
-         "id": "baegho",
-         "map": "백호",
-         "boss": "백적호왕",
-         "item": "백호무기",
-         "name": "천상미궁 비밀의 방",
-         "gentime": 21600000
-      },
-      {
-         "id": "pogbaegho",
-         "map": "폭백호",
-         "boss": "백호왕",
-         "item": "백호무기",
-         "name": "폭천상계제이계11",
-         "gentime": 28800000
-      },
-      {
-         "id": "pogbaegho",
-         "map": "폭백호",
-         "boss": "백적호왕",
-         "item": "백호무기",
-         "name": "폭천상미궁 비밀의 방",
-         "gentime": 28800000
-      },
-      {
-         "id": "yong",
-         "map": "용",
-         "boss": "흑룡",
-         "item": "흑룡의어금니",
-         "name": "흑룡의 방",
-         "gentime": 28800000
-      },
-      {
-         "id": "yong",
-         "map": "용",
-         "boss": "진룡",
-         "item": "진룡의어금니",
-         "name": "진룡의 방",
-         "gentime": 28800000
-      },
-      {
-         "id": "yong",
-         "map": "용",
-         "boss": "묵룡",
-         "item": "묵룡의어금니",
-         "name": "묵룡의 방",
-         "gentime": 28800000
-      },
-      {
-         "id": "yong",
-         "map": "용",
-         "boss": "감룡",
-         "item": "감룡의어금니",
-         "name": "감룡의 방",
-         "gentime": 28800000
-      },
-      {
-         "id": "yongwang",
-         "map": "용왕",
-         "boss": "용왕용마",
-         "item": "용마의발톱",
-         "name": "용왕용마의침소",
-         "gentime": 79200000
-      },
-      {
-         "id": "yongwang",
-         "map": "용왕",
-         "boss": "용왕용천",
-         "item": "용천의발톱",
-         "name": "용왕용천의침소",
-         "gentime": 79200000
-      },
-      {
-         "id": "yongwang",
-         "map": "용왕",
-         "boss": "용왕용랑",
-         "item": "용랑의발톱",
-         "name": "용왕용랑의침소",
-         "gentime": 79200000
-      },
-      {
-         "id": "yongwang",
-         "map": "용왕",
-         "boss": "용왕용겸",
-         "item": "용겸의발톱",
-         "name": "용왕용겸의침소",
-         "gentime": 79200000
-      },
-      {
-         "id": "yongwang",
-         "map": "용왕",
-         "boss": "용왕용비",
-         "item": "용비의발톱",
-         "name": "용왕용비의침소",
-         "gentime": 79200000
-      },
-      {
-         "id": "pogyong",
-         "map": "폭용",
-         "boss": "흑룡",
-         "item": "흑룡의어금니",
-         "name": "폭흑룡의 방",
-         "gentime": 28800000
-      },
-      {
-         "id": "pogyong",
-         "map": "폭용",
-         "boss": "진룡",
-         "item": "진룡의어금니",
-         "name": "폭진룡의 방",
-         "gentime": 28800000
-      },
-      {
-         "id": "pogyong",
-         "map": "폭용",
-         "boss": "묵룡",
-         "item": "묵룡의어금니",
-         "name": "폭묵룡의 방",
-         "gentime": 28800000
-      },
-      {
-         "id": "pogyong",
-         "map": "폭용",
-         "boss": "감룡",
-         "item": "감룡의어금니",
-         "name": "폭감룡의 방",
-         "gentime": 28800000
-      },
-      {
-         "id": "yongwang",
-         "map": "은용왕",
-         "boss": "용왕용마",
-         "item": "용마의발톱",
-         "name": "은용왕용마의침소",
-         "gentime": 39600000
-      },
-      {
-         "id": "yongwang",
-         "map": "은용왕",
-         "boss": "용왕용천",
-         "item": "용천의발톱",
-         "name": "은용왕용천의침소",
-         "gentime": 39600000
-      },
-      {
-         "id": "yongwang",
-         "map": "은용왕",
-         "boss": "용왕용랑",
-         "item": "용랑의발톱",
-         "name": "은용왕용랑의침소",
-         "gentime": 39600000
-      },
-      {
-         "id": "yongwang",
-         "map": "은용왕",
-         "boss": "용왕용겸",
-         "item": "용겸의발톱",
-         "name": "은용왕용겸의침소",
-         "gentime": 39600000
-      },
-      {
-         "id": "yongwang",
-         "map": "은용왕",
-         "boss": "용왕용비",
-         "item": "용비의발톱",
-         "name": "은용왕용비의침소",
-         "gentime": 39600000
-      },
-      {
-         "id": "sibi",
-         "map": "십이지신",
-         "boss": "행운다람쥐",
-         "item": "풍운제일검",
-         "name": "두고개",
-         "gentime": 18000000
-      },
-      {
-         "id": "sibi",
-         "map": "십이지신",
-         "boss": "착한돼지",
-         "item": "풍운제이검",
-         "name": "세고개6",
-         "gentime": 32400000
-      },
-      {
-         "id": "sibi",
-         "map": "십이지신",
-         "boss": "주사",
-         "item": "풍의제삼검",
-         "name": "네고개1",
-         "gentime": 21600000
-      },
-      {
-         "id": "sibi",
-         "map": "십이지신",
-         "boss": "대사",
-         "item": "운의제삼검",
-         "name": "네고개2",
-         "gentime": 21600000
-      },
-      {
-         "id": "sibi",
-         "map": "십이지신",
-         "boss": "주사",
-         "item": "풍의제삼검",
-         "name": "네고개6",
-         "gentime": 21600000
-      },
-      {
-         "id": "sibi",
-         "map": "십이지신",
-         "boss": "대사",
-         "item": "운의제삼검",
-         "name": "네고개7",
-         "gentime": 21600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "귀엽다람쥐",
-         "item": "평양성명패",
-         "name": "평양 왕초보사냥터",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "깨문다람쥐",
-         "item": "평양성명패",
-         "name": "평양 왕초보사냥터2",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "민다람쥐",
-         "item": "평양성명패",
-         "name": "평양 왕초보사냥터3",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "화난다람쥐",
-         "item": "평양성명패",
-         "name": "평양 왕초보사냥터4",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "불쏜다람쥐",
-         "item": "평양성명패",
-         "name": "평양 왕초보사냥터5",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "귀엽다람쥐",
-         "item": "평양성명패",
-         "name": "평양 초보사냥터",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "깨문다람쥐",
-         "item": "평양성명패",
-         "name": "평양 초보사냥터2",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "민다람쥐",
-         "item": "평양성명패",
-         "name": "평양 초보사냥터3",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "화난다람쥐",
-         "item": "평양성명패",
-         "name": "평양 초보사냥터4",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "불쏜다람쥐",
-         "item": "평양성명패",
-         "name": "평양 초보사냥터5",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "귀엽다람쥐",
-         "item": "평양성명패",
-         "name": "평양 초보자유사냥터",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "깨문다람쥐",
-         "item": "평양성명패",
-         "name": "평양 초보자유사냥터2",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "민다람쥐",
-         "item": "평양성명패",
-         "name": "평양 초보자유사냥터3",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "화난다람쥐",
-         "item": "평양성명패",
-         "name": "평양 초보자유사냥터4",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "불쏜다람쥐",
-         "item": "평양성명패",
-         "name": "평양 초보자유사냥터5",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "귀엽다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 왕초보사냥터",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "깨문다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 왕초보사냥터2",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "민다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 왕초보사냥터3",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "화난다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 왕초보사냥터4",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "불쏜다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 왕초보사냥터5",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "귀엽다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 초보사냥터",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "깨문다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 초보사냥터2",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "민다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 초보사냥터3",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "화난다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 초보사냥터4",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "불쏜다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 초보사냥터5",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "귀엽다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 초보자유사냥터",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "깨문다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 초보자유사냥터2",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "민다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 초보자유사냥터3",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "화난다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 초보자유사냥터4",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "불쏜다람쥐",
-         "item": "동부여성명패",
-         "name": "동부여 초보자유사냥터5",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "빨간박쥐",
-         "item": "평양성명패",
-         "name": "평양 쥐굴",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "파란박쥐",
-         "item": "평양성명패",
-         "name": "평양 쥐굴2",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "흡혈쥐",
-         "item": "평양성명패",
-         "name": "평양 쥐굴3",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "서생원",
-         "item": "평양성명패",
-         "name": "평양 쥐굴4",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "자생원",
-         "item": "평양성명패",
-         "name": "평양 쥐굴5",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "노란박쥐",
-         "item": "평양성명패",
-         "name": "평양 쥐굴6",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "빨간박쥐",
-         "item": "동부여성명패",
-         "name": "동부여 쥐굴",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "파란박쥐",
-         "item": "동부여성명패",
-         "name": "동부여 쥐굴2",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "흡혈쥐",
-         "item": "동부여성명패",
-         "name": "동부여 쥐굴3",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "서생원",
-         "item": "동부여성명패",
-         "name": "동부여 쥐굴4",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "자생원",
-         "item": "동부여성명패",
-         "name": "동부여 쥐굴5",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "노란박쥐",
-         "item": "동부여성명패",
-         "name": "동부여 쥐굴6",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "구렁이",
-         "item": "평양성명패",
-         "name": "평양 뱀굴",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "구렁이",
-         "item": "평양성명패",
-         "name": "평양 뱀굴2",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "구렁이",
-         "item": "평양성명패",
-         "name": "평양 뱀굴3",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "구렁이",
-         "item": "평양성명패",
-         "name": "평양 뱀굴4",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "구렁이",
-         "item": "평양성명패",
-         "name": "평양 뱀굴5",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "구렁이",
-         "item": "평양성명패",
-         "name": "평양 뱀굴6",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "구렁이",
-         "item": "평양성명패",
-         "name": "평양 뱀굴7",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "왕구렁이",
-         "item": "평양성명패",
-         "name": "평양 뱀굴8",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "구렁이",
-         "item": "동부여성명패",
-         "name": "동부여 뱀굴",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "구렁이",
-         "item": "동부여성명패",
-         "name": "동부여 뱀굴2",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "구렁이",
-         "item": "동부여성명패",
-         "name": "동부여 뱀굴3",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "구렁이",
-         "item": "동부여성명패",
-         "name": "동부여 뱀굴4",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "구렁이",
-         "item": "동부여성명패",
-         "name": "동부여 뱀굴5",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "구렁이",
-         "item": "동부여성명패",
-         "name": "동부여 뱀굴6",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "구렁이",
-         "item": "동부여성명패",
-         "name": "동부여 뱀굴7",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "왕구렁이",
-         "item": "동부여성명패",
-         "name": "동부여 뱀굴8",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "광록지수",
-         "item": "평양성명패",
-         "name": "평양 사슴굴",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "광록지수",
-         "item": "평양성명패",
-         "name": "평양 사슴굴2",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "광록지수",
-         "item": "평양성명패",
-         "name": "평양 사슴굴3",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "광록지수",
-         "item": "평양성명패",
-         "name": "평양 사슴굴4",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "광록지수",
-         "item": "평양성명패",
-         "name": "평양 사슴굴5",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "광록지수",
-         "item": "평양성명패",
-         "name": "평양 사슴굴6",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "광록지수",
-         "item": "평양성명패",
-         "name": "평양 사슴굴7",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "광록지수",
-         "item": "평양성명패",
-         "name": "평양 사슴굴8",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "광록지수",
-         "item": "평양성명패",
-         "name": "평양 사슴굴9",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "광록지수",
-         "item": "평양성명패",
-         "name": "평양 사슴굴10",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "광록지수",
-         "item": "동부여성명패",
-         "name": "동부여 사슴굴",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "광록지수",
-         "item": "동부여성명패",
-         "name": "동부여 사슴굴2",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "광록지수",
-         "item": "동부여성명패",
-         "name": "동부여 사슴굴3",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "광록지수",
-         "item": "동부여성명패",
-         "name": "동부여 사슴굴4",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "광록지수",
-         "item": "동부여성명패",
-         "name": "동부여 사슴굴5",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "광록지수",
-         "item": "동부여성명패",
-         "name": "동부여 사슴굴6",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "광록지수",
-         "item": "동부여성명패",
-         "name": "동부여 사슴굴7",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "광록지수",
-         "item": "동부여성명패",
-         "name": "동부여 사슴굴8",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "광록지수",
-         "item": "동부여성명패",
-         "name": "동부여 사슴굴9",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "광록지수",
-         "item": "동부여성명패",
-         "name": "동부여 사슴굴10",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈곰",
-         "item": "평양성명패",
-         "name": "평양 곰굴",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈곰",
-         "item": "평양성명패",
-         "name": "평양 곰굴2",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈곰",
-         "item": "평양성명패",
-         "name": "평양 곰굴3",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈곰",
-         "item": "평양성명패",
-         "name": "평양 곰굴4",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈곰",
-         "item": "평양성명패",
-         "name": "평양 곰굴5",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "진호",
-         "item": "평양성명패",
-         "name": "평양 곰굴6",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈곰",
-         "item": "동부여성명패",
-         "name": "동부여 곰굴",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈곰",
-         "item": "동부여성명패",
-         "name": "동부여 곰굴2",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈곰",
-         "item": "동부여성명패",
-         "name": "동부여 곰굴3",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈곰",
-         "item": "동부여성명패",
-         "name": "동부여 곰굴4",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈곰",
-         "item": "동부여성명패",
-         "name": "동부여 곰굴5",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "진호",
-         "item": "동부여성명패",
-         "name": "동부여 곰굴6",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈돼지",
-         "item": "동부여성명패",
-         "name": "동부여 돼지굴",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈돼지",
-         "item": "동부여성명패",
-         "name": "동부여 돼지굴2",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈돼지",
-         "item": "동부여성명패",
-         "name": "동부여 돼지굴3",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈돼지",
-         "item": "동부여성명패",
-         "name": "동부여 돼지굴4",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈돼지",
-         "item": "동부여성명패",
-         "name": "동부여 돼지굴5",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈돼지",
-         "item": "동부여성명패",
-         "name": "동부여 돼지굴6",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈돼지",
-         "item": "동부여성명패",
-         "name": "동부여 돼지굴7",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈돼지",
-         "item": "동부여성명패",
-         "name": "동부여 돼지굴8",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "힘쎈돼지",
-         "item": "동부여성명패",
-         "name": "동부여 돼지굴9",
-         "gentime": 3600000
-      },
-      {
-         "id": "buyeo",
-         "map": "동부여성",
-         "boss": "홍돼지",
-         "item": "동부여성명패",
-         "name": "동부여 돼지굴10",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈돼지",
-         "item": "평양성명패",
-         "name": "평양 돼지굴",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈돼지",
-         "item": "평양성명패",
-         "name": "평양 돼지굴2",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈돼지",
-         "item": "평양성명패",
-         "name": "평양 돼지굴3",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈돼지",
-         "item": "평양성명패",
-         "name": "평양 돼지굴4",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈돼지",
-         "item": "평양성명패",
-         "name": "평양 돼지굴5",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈돼지",
-         "item": "평양성명패",
-         "name": "평양 돼지굴6",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈돼지",
-         "item": "평양성명패",
-         "name": "평양 돼지굴7",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈돼지",
-         "item": "평양성명패",
-         "name": "평양 돼지굴8",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "힘쎈돼지",
-         "item": "평양성명패",
-         "name": "평양 돼지굴9",
-         "gentime": 3600000
-      },
-      {
-         "id": "pyeonyang",
-         "map": "평양성",
-         "boss": "홍돼지",
-         "item": "평양성명패",
-         "name": "평양 돼지굴10",
-         "gentime": 3600000
-      }
-   ]
+  "data": [
+    {
+      "id": "gugnae",
+      "map": "국내성",
+      "boss": "인형술사",
+      "item": "백화검",
+      "name": "국내인형굴10",
+      "gentime": 10020000
+    },
+    {
+      "id": "buyeo",
+      "map": "부여성",
+      "boss": "인형술사",
+      "item": "백화검",
+      "name": "부여인형굴10",
+      "gentime": 10020000
+    },
+    {
+      "id": "gugnae",
+      "map": "국내성",
+      "boss": "도깨비왕",
+      "item": "도깨비방망이",
+      "name": "물망동7",
+      "gentime": 10020000
+    },
+    {
+      "id": "buyeo",
+      "map": "부여성",
+      "boss": "도깨비왕",
+      "item": "도깨비방망이",
+      "name": "백륜동10",
+      "gentime": 10020000
+    },
+    {
+      "id": "gugnae",
+      "map": "국내성",
+      "boss": "도깨비왕",
+      "item": "도깨비방망이",
+      "name": "물망동 이면7",
+      "gentime": 10020000
+    },
+    {
+      "id": "buyeo",
+      "map": "부여성",
+      "boss": "도깨비왕",
+      "item": "도깨비방망이",
+      "name": "백륜동 이면10",
+      "gentime": 10020000
+    },
+    {
+      "id": "gugnae",
+      "map": "국내성",
+      "boss": "일본밀정두목",
+      "item": "백옥노리개",
+      "name": "국내비밀세작10",
+      "gentime": 10020000
+    },
+    {
+      "id": "buyeo",
+      "map": "부여성",
+      "boss": "일본밀정두목",
+      "item": "백옥노리개",
+      "name": "부여비밀세작10",
+      "gentime": 10020000
+    },
+    {
+      "id": "gugnae",
+      "map": "국내성",
+      "boss": "힘쎈독충",
+      "item": "사귀보조장비",
+      "name": "국내흉가9 비밀통로",
+      "gentime": 7200000
+    },
+    {
+      "id": "buyeo",
+      "map": "부여성",
+      "boss": "힘쎈노인",
+      "item": "사귀보조장비",
+      "name": "부여흉가9 비밀통로",
+      "gentime": 7200000
+    },
+    {
+      "id": "sanjeog",
+      "map": "산적굴",
+      "boss": "산적부두목",
+      "item": "달빛도파",
+      "name": "동2-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "sanjeog",
+      "map": "산적굴",
+      "boss": "산적부두목",
+      "item": "달빛도파",
+      "name": "동3-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "sanjeog",
+      "map": "산적굴",
+      "boss": "겁살파수",
+      "item": "달빛날",
+      "name": "서2-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "sanjeog",
+      "map": "산적굴",
+      "boss": "겁살파수",
+      "item": "달빛날",
+      "name": "서3-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "sanjeog",
+      "map": "산적굴",
+      "boss": "겁살파수꾼",
+      "item": "달빛돌",
+      "name": "남2-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "sanjeog",
+      "map": "산적굴",
+      "boss": "겁살파수꾼",
+      "item": "달빛돌",
+      "name": "남3-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "sanjeog",
+      "map": "산적굴",
+      "boss": "주비",
+      "item": "달빛기운",
+      "name": "북2-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "sanjeog",
+      "map": "산적굴",
+      "boss": "주비",
+      "item": "달빛기운",
+      "name": "북3-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "pogsanjeog",
+      "map": "폭산적굴",
+      "boss": "산적부두목",
+      "item": "달빛도파",
+      "name": "폭동2-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "pogsanjeog",
+      "map": "폭산적굴",
+      "boss": "산적부두목",
+      "item": "달빛도파",
+      "name": "폭동3-9",
+      "gentime": 14400000
+    },
+    {
+      "id": "pogsanjeog",
+      "map": "폭산적굴",
+      "boss": "겁살파수",
+      "item": "달빛날",
+      "name": "폭서2-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "pogsanjeog",
+      "map": "폭산적굴",
+      "boss": "겁살파수",
+      "item": "달빛날",
+      "name": "폭서3-9",
+      "gentime": 14400000
+    },
+    {
+      "id": "pogsanjeog",
+      "map": "폭산적굴",
+      "boss": "겁살파수꾼",
+      "item": "달빛돌",
+      "name": "폭남2-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "pogsanjeog",
+      "map": "폭산적굴",
+      "boss": "겁살파수꾼",
+      "item": "달빛돌",
+      "name": "폭남3-9",
+      "gentime": 14400000
+    },
+    {
+      "id": "pogsanjeog",
+      "map": "폭산적굴",
+      "boss": "주비",
+      "item": "달빛기운",
+      "name": "폭북2-9",
+      "gentime": 10800000
+    },
+    {
+      "id": "pogsanjeog",
+      "map": "폭산적굴",
+      "boss": "주비",
+      "item": "달빛기운",
+      "name": "폭북3-9",
+      "gentime": 14400000
+    },
+    {
+      "id": "bugbang",
+      "map": "북방대초원",
+      "boss": "맹독화군",
+      "item": "오선오뢰창",
+      "name": "북방27",
+      "gentime": 3600000
+    },
+    {
+      "id": "bugbang",
+      "map": "북방대초원",
+      "boss": "맹독화군",
+      "item": "오선오뢰창",
+      "name": "북방28",
+      "gentime": 3600000
+    },
+    {
+      "id": "bugbang",
+      "map": "북방대초원",
+      "boss": "맹독화군",
+      "item": "오선오뢰창",
+      "name": "북방29",
+      "gentime": 3600000
+    },
+    {
+      "id": "bugbang",
+      "map": "북방대초원",
+      "boss": "맹독화군",
+      "item": "오선오뢰창",
+      "name": "북방30",
+      "gentime": 3600000
+    },
+    {
+      "id": "bugbang",
+      "map": "북방대초원",
+      "boss": "철갑대사",
+      "item": "인풍죽선",
+      "name": "북방38",
+      "gentime": 3600000
+    },
+    {
+      "id": "bugbang",
+      "map": "북방대초원",
+      "boss": "철갑대사",
+      "item": "인풍죽선",
+      "name": "북방39",
+      "gentime": 3600000
+    },
+    {
+      "id": "bugbang",
+      "map": "북방대초원",
+      "boss": "철갑대사",
+      "item": "인풍죽선",
+      "name": "북방40",
+      "gentime": 3600000
+    },
+    {
+      "id": "baegho",
+      "map": "백호",
+      "boss": "백호왕",
+      "item": "백호무기",
+      "name": "천상계제이계11",
+      "gentime": 21600000
+    },
+    {
+      "id": "baegho",
+      "map": "백호",
+      "boss": "백적호왕",
+      "item": "백호무기",
+      "name": "천상미궁 비밀의 방",
+      "gentime": 21600000
+    },
+    {
+      "id": "pogbaegho",
+      "map": "폭백호",
+      "boss": "백호왕",
+      "item": "백호무기",
+      "name": "폭천상계제이계11",
+      "gentime": 28800000
+    },
+    {
+      "id": "pogbaegho",
+      "map": "폭백호",
+      "boss": "백적호왕",
+      "item": "백호무기",
+      "name": "폭천상미궁 비밀의 방",
+      "gentime": 28800000
+    },
+    {
+      "id": "yong",
+      "map": "용",
+      "boss": "흑룡",
+      "item": "흑룡의어금니",
+      "name": "흑룡의 방",
+      "gentime": 28800000
+    },
+    {
+      "id": "yong",
+      "map": "용",
+      "boss": "진룡",
+      "item": "진룡의어금니",
+      "name": "진룡의 방",
+      "gentime": 28800000
+    },
+    {
+      "id": "yong",
+      "map": "용",
+      "boss": "묵룡",
+      "item": "묵룡의어금니",
+      "name": "묵룡의 방",
+      "gentime": 28800000
+    },
+    {
+      "id": "yong",
+      "map": "용",
+      "boss": "감룡",
+      "item": "감룡의어금니",
+      "name": "감룡의 방",
+      "gentime": 28800000
+    },
+    {
+      "id": "yongwang",
+      "map": "용왕",
+      "boss": "용왕용마",
+      "item": "용마의발톱",
+      "name": "용왕용마의침소",
+      "gentime": 79200000
+    },
+    {
+      "id": "yongwang",
+      "map": "용왕",
+      "boss": "용왕용천",
+      "item": "용천의발톱",
+      "name": "용왕용천의침소",
+      "gentime": 79200000
+    },
+    {
+      "id": "yongwang",
+      "map": "용왕",
+      "boss": "용왕용랑",
+      "item": "용랑의발톱",
+      "name": "용왕용랑의침소",
+      "gentime": 79200000
+    },
+    {
+      "id": "yongwang",
+      "map": "용왕",
+      "boss": "용왕용겸",
+      "item": "용겸의발톱",
+      "name": "용왕용겸의침소",
+      "gentime": 79200000
+    },
+    {
+      "id": "yongwang",
+      "map": "용왕",
+      "boss": "용왕용비",
+      "item": "용비의발톱",
+      "name": "용왕용비의침소",
+      "gentime": 79200000
+    },
+    {
+      "id": "pogyong",
+      "map": "폭용",
+      "boss": "흑룡",
+      "item": "흑룡의어금니",
+      "name": "폭흑룡의 방",
+      "gentime": 28800000
+    },
+    {
+      "id": "pogyong",
+      "map": "폭용",
+      "boss": "진룡",
+      "item": "진룡의어금니",
+      "name": "폭진룡의 방",
+      "gentime": 28800000
+    },
+    {
+      "id": "pogyong",
+      "map": "폭용",
+      "boss": "묵룡",
+      "item": "묵룡의어금니",
+      "name": "폭묵룡의 방",
+      "gentime": 28800000
+    },
+    {
+      "id": "pogyong",
+      "map": "폭용",
+      "boss": "감룡",
+      "item": "감룡의어금니",
+      "name": "폭감룡의 방",
+      "gentime": 28800000
+    },
+    {
+      "id": "yongwang",
+      "map": "은용왕",
+      "boss": "용왕용마",
+      "item": "용마의발톱",
+      "name": "은용왕용마의침소",
+      "gentime": 39600000
+    },
+    {
+      "id": "yongwang",
+      "map": "은용왕",
+      "boss": "용왕용천",
+      "item": "용천의발톱",
+      "name": "은용왕용천의침소",
+      "gentime": 39600000
+    },
+    {
+      "id": "yongwang",
+      "map": "은용왕",
+      "boss": "용왕용랑",
+      "item": "용랑의발톱",
+      "name": "은용왕용랑의침소",
+      "gentime": 39600000
+    },
+    {
+      "id": "yongwang",
+      "map": "은용왕",
+      "boss": "용왕용겸",
+      "item": "용겸의발톱",
+      "name": "은용왕용겸의침소",
+      "gentime": 39600000
+    },
+    {
+      "id": "yongwang",
+      "map": "은용왕",
+      "boss": "용왕용비",
+      "item": "용비의발톱",
+      "name": "은용왕용비의침소",
+      "gentime": 39600000
+    },
+    {
+      "id": "sibi",
+      "map": "십이지신",
+      "boss": "행운다람쥐",
+      "item": "풍운제일검",
+      "name": "두고개",
+      "gentime": 18000000
+    },
+    {
+      "id": "sibi",
+      "map": "십이지신",
+      "boss": "착한돼지",
+      "item": "풍운제이검",
+      "name": "세고개6",
+      "gentime": 32400000
+    },
+    {
+      "id": "sibi",
+      "map": "십이지신",
+      "boss": "주사",
+      "item": "풍의제삼검",
+      "name": "네고개1",
+      "gentime": 21600000
+    },
+    {
+      "id": "sibi",
+      "map": "십이지신",
+      "boss": "대사",
+      "item": "운의제삼검",
+      "name": "네고개2",
+      "gentime": 21600000
+    },
+    {
+      "id": "sibi",
+      "map": "십이지신",
+      "boss": "주사",
+      "item": "풍의제삼검",
+      "name": "네고개6",
+      "gentime": 21600000
+    },
+    {
+      "id": "sibi",
+      "map": "십이지신",
+      "boss": "대사",
+      "item": "운의제삼검",
+      "name": "네고개7",
+      "gentime": 21600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "귀엽다람쥐",
+      "item": "평양성명패",
+      "name": "평양 왕초보사냥터",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "깨문다람쥐",
+      "item": "평양성명패",
+      "name": "평양 왕초보사냥터2",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "민다람쥐",
+      "item": "평양성명패",
+      "name": "평양 왕초보사냥터3",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "화난다람쥐",
+      "item": "평양성명패",
+      "name": "평양 왕초보사냥터4",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "불쏜다람쥐",
+      "item": "평양성명패",
+      "name": "평양 왕초보사냥터5",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "귀엽다람쥐",
+      "item": "평양성명패",
+      "name": "평양 초보사냥터",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "깨문다람쥐",
+      "item": "평양성명패",
+      "name": "평양 초보사냥터2",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "민다람쥐",
+      "item": "평양성명패",
+      "name": "평양 초보사냥터3",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "화난다람쥐",
+      "item": "평양성명패",
+      "name": "평양 초보사냥터4",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "불쏜다람쥐",
+      "item": "평양성명패",
+      "name": "평양 초보사냥터5",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "귀엽다람쥐",
+      "item": "평양성명패",
+      "name": "평양 초보자유사냥터",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "깨문다람쥐",
+      "item": "평양성명패",
+      "name": "평양 초보자유사냥터2",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "민다람쥐",
+      "item": "평양성명패",
+      "name": "평양 초보자유사냥터3",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "화난다람쥐",
+      "item": "평양성명패",
+      "name": "평양 초보자유사냥터4",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "불쏜다람쥐",
+      "item": "평양성명패",
+      "name": "평양 초보자유사냥터5",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "귀엽다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 왕초보사냥터",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "깨문다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 왕초보사냥터2",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "민다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 왕초보사냥터3",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "화난다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 왕초보사냥터4",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "불쏜다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 왕초보사냥터5",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "귀엽다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 초보사냥터",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "깨문다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 초보사냥터2",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "민다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 초보사냥터3",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "화난다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 초보사냥터4",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "불쏜다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 초보사냥터5",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "귀엽다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 초보자유사냥터",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "깨문다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 초보자유사냥터2",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "민다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 초보자유사냥터3",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "화난다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 초보자유사냥터4",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "불쏜다람쥐",
+      "item": "동부여성명패",
+      "name": "동부여 초보자유사냥터5",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "빨간박쥐",
+      "item": "평양성명패",
+      "name": "평양 쥐굴",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "파란박쥐",
+      "item": "평양성명패",
+      "name": "평양 쥐굴2",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "흡혈쥐",
+      "item": "평양성명패",
+      "name": "평양 쥐굴3",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "서생원",
+      "item": "평양성명패",
+      "name": "평양 쥐굴4",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "자생원",
+      "item": "평양성명패",
+      "name": "평양 쥐굴5",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "노란박쥐",
+      "item": "평양성명패",
+      "name": "평양 쥐굴6",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "빨간박쥐",
+      "item": "동부여성명패",
+      "name": "동부여 쥐굴",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "파란박쥐",
+      "item": "동부여성명패",
+      "name": "동부여 쥐굴2",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "흡혈쥐",
+      "item": "동부여성명패",
+      "name": "동부여 쥐굴3",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "서생원",
+      "item": "동부여성명패",
+      "name": "동부여 쥐굴4",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "자생원",
+      "item": "동부여성명패",
+      "name": "동부여 쥐굴5",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "노란박쥐",
+      "item": "동부여성명패",
+      "name": "동부여 쥐굴6",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "구렁이",
+      "item": "평양성명패",
+      "name": "평양 뱀굴",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "구렁이",
+      "item": "평양성명패",
+      "name": "평양 뱀굴2",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "구렁이",
+      "item": "평양성명패",
+      "name": "평양 뱀굴3",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "구렁이",
+      "item": "평양성명패",
+      "name": "평양 뱀굴4",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "구렁이",
+      "item": "평양성명패",
+      "name": "평양 뱀굴5",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "구렁이",
+      "item": "평양성명패",
+      "name": "평양 뱀굴6",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "구렁이",
+      "item": "평양성명패",
+      "name": "평양 뱀굴7",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "왕구렁이",
+      "item": "평양성명패",
+      "name": "평양 뱀굴8",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "구렁이",
+      "item": "동부여성명패",
+      "name": "동부여 뱀굴",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "구렁이",
+      "item": "동부여성명패",
+      "name": "동부여 뱀굴2",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "구렁이",
+      "item": "동부여성명패",
+      "name": "동부여 뱀굴3",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "구렁이",
+      "item": "동부여성명패",
+      "name": "동부여 뱀굴4",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "구렁이",
+      "item": "동부여성명패",
+      "name": "동부여 뱀굴5",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "구렁이",
+      "item": "동부여성명패",
+      "name": "동부여 뱀굴6",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "구렁이",
+      "item": "동부여성명패",
+      "name": "동부여 뱀굴7",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "왕구렁이",
+      "item": "동부여성명패",
+      "name": "동부여 뱀굴8",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "광록지수",
+      "item": "평양성명패",
+      "name": "평양 사슴굴",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "광록지수",
+      "item": "평양성명패",
+      "name": "평양 사슴굴2",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "광록지수",
+      "item": "평양성명패",
+      "name": "평양 사슴굴3",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "광록지수",
+      "item": "평양성명패",
+      "name": "평양 사슴굴4",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "광록지수",
+      "item": "평양성명패",
+      "name": "평양 사슴굴5",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "광록지수",
+      "item": "평양성명패",
+      "name": "평양 사슴굴6",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "광록지수",
+      "item": "평양성명패",
+      "name": "평양 사슴굴7",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "광록지수",
+      "item": "평양성명패",
+      "name": "평양 사슴굴8",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "광록지수",
+      "item": "평양성명패",
+      "name": "평양 사슴굴9",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "광록지수",
+      "item": "평양성명패",
+      "name": "평양 사슴굴10",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "광록지수",
+      "item": "동부여성명패",
+      "name": "동부여 사슴굴",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "광록지수",
+      "item": "동부여성명패",
+      "name": "동부여 사슴굴2",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "광록지수",
+      "item": "동부여성명패",
+      "name": "동부여 사슴굴3",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "광록지수",
+      "item": "동부여성명패",
+      "name": "동부여 사슴굴4",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "광록지수",
+      "item": "동부여성명패",
+      "name": "동부여 사슴굴5",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "광록지수",
+      "item": "동부여성명패",
+      "name": "동부여 사슴굴6",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "광록지수",
+      "item": "동부여성명패",
+      "name": "동부여 사슴굴7",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "광록지수",
+      "item": "동부여성명패",
+      "name": "동부여 사슴굴8",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "광록지수",
+      "item": "동부여성명패",
+      "name": "동부여 사슴굴9",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "광록지수",
+      "item": "동부여성명패",
+      "name": "동부여 사슴굴10",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈곰",
+      "item": "평양성명패",
+      "name": "평양 곰굴",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈곰",
+      "item": "평양성명패",
+      "name": "평양 곰굴2",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈곰",
+      "item": "평양성명패",
+      "name": "평양 곰굴3",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈곰",
+      "item": "평양성명패",
+      "name": "평양 곰굴4",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈곰",
+      "item": "평양성명패",
+      "name": "평양 곰굴5",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "진호",
+      "item": "평양성명패",
+      "name": "평양 곰굴6",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈곰",
+      "item": "동부여성명패",
+      "name": "동부여 곰굴",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈곰",
+      "item": "동부여성명패",
+      "name": "동부여 곰굴2",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈곰",
+      "item": "동부여성명패",
+      "name": "동부여 곰굴3",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈곰",
+      "item": "동부여성명패",
+      "name": "동부여 곰굴4",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈곰",
+      "item": "동부여성명패",
+      "name": "동부여 곰굴5",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "진호",
+      "item": "동부여성명패",
+      "name": "동부여 곰굴6",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈돼지",
+      "item": "동부여성명패",
+      "name": "동부여 돼지굴",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈돼지",
+      "item": "동부여성명패",
+      "name": "동부여 돼지굴2",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈돼지",
+      "item": "동부여성명패",
+      "name": "동부여 돼지굴3",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈돼지",
+      "item": "동부여성명패",
+      "name": "동부여 돼지굴4",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈돼지",
+      "item": "동부여성명패",
+      "name": "동부여 돼지굴5",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈돼지",
+      "item": "동부여성명패",
+      "name": "동부여 돼지굴6",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈돼지",
+      "item": "동부여성명패",
+      "name": "동부여 돼지굴7",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈돼지",
+      "item": "동부여성명패",
+      "name": "동부여 돼지굴8",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "힘쎈돼지",
+      "item": "동부여성명패",
+      "name": "동부여 돼지굴9",
+      "gentime": 3600000
+    },
+    {
+      "id": "buyeo",
+      "map": "동부여성",
+      "boss": "홍돼지",
+      "item": "동부여성명패",
+      "name": "동부여 돼지굴10",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈돼지",
+      "item": "평양성명패",
+      "name": "평양 돼지굴",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈돼지",
+      "item": "평양성명패",
+      "name": "평양 돼지굴2",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈돼지",
+      "item": "평양성명패",
+      "name": "평양 돼지굴3",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈돼지",
+      "item": "평양성명패",
+      "name": "평양 돼지굴4",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈돼지",
+      "item": "평양성명패",
+      "name": "평양 돼지굴5",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈돼지",
+      "item": "평양성명패",
+      "name": "평양 돼지굴6",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈돼지",
+      "item": "평양성명패",
+      "name": "평양 돼지굴7",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈돼지",
+      "item": "평양성명패",
+      "name": "평양 돼지굴8",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "힘쎈돼지",
+      "item": "평양성명패",
+      "name": "평양 돼지굴9",
+      "gentime": 3600000
+    },
+    {
+      "id": "pyeonyang",
+      "map": "평양성",
+      "boss": "홍돼지",
+      "item": "평양성명패",
+      "name": "평양 돼지굴10",
+      "gentime": 3600000
+    }
+  ]
 }

@@ -1,13 +1,13 @@
-import CheckTime from "Components/CheckTime";
-import Cut from "Components/Cut";
-import NotRecord from "Components/NotRecord";
+import React from "react";
+import CheckTime from "../components/Record/CheckTime";
+import Cut from "../components/Record/Cut";
+import NotRecord from "../components/Record/NotRecord";
 import { useState } from "react";
 import { useEffect } from "react";
 
-const Home = ({ match }) => {
+const Home = () => {
   const [dbs, setDbs] = useState([]);
   const [checkTime, setCheckTime] = useState(Number(localStorage.getItem("checkTime")));
-
   const deleteDB = (e) => {
     const {
       dataset: { id },
@@ -33,7 +33,7 @@ const Home = ({ match }) => {
     } else {
       localStorage.setItem("dbs", JSON.stringify([]));
     }
-  }, [match]);
+  }, []);
 
   return checkTime ? (
     dbs.length !== 0 ? (

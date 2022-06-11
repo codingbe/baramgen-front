@@ -17,34 +17,8 @@ const GlobalStyles = createGlobalStyle`
     body{
         max-width:1380px;
         margin:0 auto;
-        padding:10px;
+        padding-top: 80px;
     }
-    select {
-    -o-appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-    width: 120px;
-    height: 35px;
-    background: url("https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png")
-        calc(100% - 5px) center no-repeat;
-    background-size: 20px;
-    padding: 5px 30px 5px 10px;
-    border-radius: 4px;
-    outline: 0 none;
-    font-family: "Do Hyeon";
-    font-size: 16px;
-    cursor: pointer;
-    &::-webkit-scrollbar{
-        display: none;
-    }
-    &::-ms-expand {
-    display: none;
-    }
-}
-
 `;
 
 export default GlobalStyles;
