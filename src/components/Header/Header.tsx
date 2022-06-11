@@ -39,7 +39,7 @@ const Route = styled(Link)``;
 const Alink = styled.a``;
 
 export default function Header() {
-  const REDIRECT_URL = "http://localhost:3000/signin";
+  const REDIRECT_URL = process.env.REACT_APP_REDIRECT_URL || "http://localhost:3000/signin";
   const GOOGLE_URL = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.REACT_APP_GOOGLE_CLIENT_ID}&redirect_uri=${REDIRECT_URL}&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email`;
   const dispatch = useDispatch();
   const token = useSelector((state: { token: string }) => state.token);
