@@ -28,7 +28,6 @@ const Nav = styled.nav`
 const Logo = styled(Link)`
   cursor: pointer;
   font-size: 30px;
-  font-weight: bold;
 `;
 const Ul = styled.ul`
   display: flex;
