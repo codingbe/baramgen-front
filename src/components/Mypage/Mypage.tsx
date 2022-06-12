@@ -1,12 +1,14 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { UserInfo } from "../../etc/typeDefs";
-import { SERVER_URL } from "../../etc/utils";
+import { clearToken, SERVER_URL } from "../../etc/utils";
 import Loading from "../Loading";
 import { useForm } from "react-hook-form";
+import { setToken } from "../../etc/redux/action";
+import { useNavigate } from "react-router-dom";
 
 const Form = styled.form`
   max-width: 500px;
@@ -58,6 +60,8 @@ export default function Mypage() {
   } = useForm({ mode: "onChange" });
   const { nickname } = getValues();
   const token = useSelector((state: { token: string }) => state.token);
+  const dispatch = useDispatch();
+  const nav = useNavigate();
 
   async function getUserInfo() {
     const { userInfo } = await fetch(`${SERVER_URL}/users`, {
@@ -66,6 +70,8 @@ export default function Mypage() {
     if (userInfo) {
       setUserInfo(userInfo);
       setValue("nickname", userInfo.nickname);
+    } else {
+      clearToken(dispatch, nav);
     }
   }
 

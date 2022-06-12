@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { setToken } from "../../etc/redux/action";
-import { SERVER_URL } from "../../etc/utils";
+import { clearToken, SERVER_URL } from "../../etc/utils";
 
 const Container = styled.header`
   position: fixed;
@@ -35,7 +35,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   margin-left: 12px;
 `;
-const Route = styled(Link)``;
+const Rlink = styled(Link)``;
 const Alink = styled.a``;
 
 export default function Header() {
@@ -43,6 +43,7 @@ export default function Header() {
   const GOOGLE_URL = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.REACT_APP_GOOGLE_CLIENT_ID}&redirect_uri=${REDIRECT_URL}&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email`;
   const dispatch = useDispatch();
   const token = useSelector((state: { token: string }) => state.token);
+  const nav = useNavigate();
 
   async function getToken() {
     const token = localStorage.getItem("token");
@@ -50,14 +51,14 @@ export default function Header() {
       const { userInfo } = await fetch(`${SERVER_URL}/users`, { headers: { authorization: `Bearer ${token}` } }).then(
         (res) => res.ok && res.json()
       );
-      if (!userInfo) localStorage.removeItem("token");
-      else dispatch(setToken(token));
+      if (!userInfo) {
+        clearToken(dispatch, nav);
+      } else dispatch(setToken(token));
     }
   }
 
   function requestLogout() {
-    localStorage.removeItem("token");
-    dispatch(setToken(""));
+    clearToken(dispatch, nav);
   }
 
   useEffect(() => {
@@ -70,21 +71,21 @@ export default function Header() {
         <Logo to="/">바연젠</Logo>
         <Ul>
           <Li>
-            <Route to="/record">기록</Route>
+            <Rlink to="/record">기록</Rlink>
           </Li>
           <Li>
-            <Route to="/community">커뮤니티</Route>
+            <Rlink to="/community">커뮤니티</Rlink>
           </Li>
           {token && (
             <Li>
-              <Route to="/mypage">내정보</Route>
+              <Rlink to="/mypage">내정보</Rlink>
             </Li>
           )}
           <Li>
             {token ? (
-              <Route onClick={requestLogout} to="/">
+              <Rlink onClick={requestLogout} to="/">
                 로그아웃
-              </Route>
+              </Rlink>
             ) : (
               <Alink href={GOOGLE_URL}>로그인</Alink>
             )}
