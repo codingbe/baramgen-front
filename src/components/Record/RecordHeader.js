@@ -11,20 +11,25 @@ const Header = styled("div")`
   margin: 0 auto;
   padding: 0 15px;
 `;
-
+const Reset = styled.span`
+  cursor: pointer;
+`;
 const RecordHeader = ({ maps, items, handleChange }) => {
   const nav = useNavigate();
   function clearData() {
     const check = window.confirm("기록 데이터를 초기화 하시겠습니까?");
-    if (check) localStorage.setItem("dbs", JSON.stringify([]));
-    nav("/");
+    if (check) {
+      localStorage.setItem("dbs", JSON.stringify([]));
+      localStorage.removeItem("checkTime");
+      nav("/");
+    }
   }
 
   return (
     <Header>
       <Select data={maps.sort()} title="맵선택" handleChange={handleChange} />
       <Select data={items.sort()} title="아이템선택" handleChange={handleChange} />
-      <span onClick={clearData}>초기화</span>
+      <Reset onClick={clearData}>초기화</Reset>
     </Header>
   );
 };
