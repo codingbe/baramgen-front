@@ -14,6 +14,7 @@ const Container = styled.header`
   top: 0;
   background-color: white;
   z-index: 30;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 `;
 const Nav = styled.nav`
   max-width: 1200px;

@@ -3,6 +3,9 @@ import React from "react";
 import { currentTime } from "../../etc/utils";
 
 const Container = styled.div`
+  padding: 10px;
+`;
+const Column = styled.div`
   text-align: center;
   padding: 10px;
   border: 1px solid black;
@@ -42,14 +45,16 @@ const Link = styled.a`
 const CheckTime = ({ insertCheckTime }) => {
   return (
     <Container>
-      <Title>최근 점검시간을 입력해주세요.</Title>
-      <Link href="https://forum.nexon.com/baramy/board_list?board=259" target="_blank">
-        참고링크
-      </Link>
-      <Form onSubmit={insertCheckTime}>
-        <Input type="datetime-local" defaultValue={currentTime()} />
-        <Button type="submit">입력</Button>
-      </Form>
+      <Column>
+        <Title>최근 점검시간을 입력해주세요.</Title>
+        <Link href="https://forum.nexon.com/baramy/board_list?board=259" target="_blank">
+          참고링크
+        </Link>
+        <Form onSubmit={insertCheckTime}>
+          <Input type="datetime-local" defaultValue={currentTime()} />
+          <Button type="submit">입력</Button>
+        </Form>
+      </Column>
     </Container>
   );
 };
