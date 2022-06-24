@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "mabinogi";
+  src: url("./fonts/Mabinogi_Classic_TTF.ttf") format("truetype"),
+    url("./fonts/Mabinogi_Classic_TTF.woff") format("woff"),
+    url("./fonts/Mabinogi_Classic_TTF.eot?iefix") format("embedded-opentype");
+  font-weight: 500;
+  font-style: normal;
+}

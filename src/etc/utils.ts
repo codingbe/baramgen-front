@@ -18,6 +18,30 @@ export const currentTime = () => {
 
 export const clearToken = (dispatch: Dispatch, nav: NavigateFunction) => {
   localStorage.removeItem("token");
-  dispatch(setToken(""));
+  dispatch(setToken("", {}));
   nav("/");
+};
+
+export const timeForToday = (value: Date) => {
+  const today = new Date();
+  const timeValue = new Date(value);
+  const year = timeValue.getFullYear();
+  const month = timeValue.getMonth() + 1;
+  const date = timeValue.getDate();
+
+  const betweenTime = Math.floor((today.getTime() - timeValue.getTime()) / 1000 / 60);
+  if (betweenTime < 1) return "방금전";
+  if (betweenTime < 60) {
+    return `${betweenTime}분전`;
+  }
+
+  const betweenTimeHour = Math.floor(betweenTime / 60);
+  if (betweenTimeHour < 24) {
+    return `${betweenTimeHour}시간전`;
+  }
+
+  const betweenTimeDay = Math.floor(betweenTime / 60 / 24);
+  if (Math.floor(betweenTimeDay / 365) > 0)
+    return `${year}.${month < 10 ? `0${month}` : month}.${date < 10 ? `0${date}` : date}`;
+  return `${betweenTimeDay}일전`;
 };

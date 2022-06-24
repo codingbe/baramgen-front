@@ -78,7 +78,7 @@ const Cut = ({ dbs, deleteDB, checkTime, setDbs }) => {
       ))}
     </Grid>
   ) : (
-    <NotRecord check={true} />
+    <NotRecord content="맵이나 아이템을 선택한 후 기록해보세요!" />
   );
 };
 

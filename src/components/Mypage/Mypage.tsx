@@ -7,7 +7,6 @@ import { UserInfo } from "../../etc/typeDefs";
 import { clearToken, SERVER_URL } from "../../etc/utils";
 import Loading from "../Loading";
 import { useForm } from "react-hook-form";
-import { setToken } from "../../etc/redux/action";
 import { useNavigate } from "react-router-dom";
 
 const Form = styled.form`
@@ -87,7 +86,7 @@ export default function Mypage() {
       body: JSON.stringify({ nickname }),
     }).then((res) => res.ok && res.json());
     if (userInfo) alert("수정완료!");
-    else alert("수정실패!");
+    else alert("닉네임 중복!");
   }
 
   function onSubmit() {

@@ -39,7 +39,7 @@ const Home = () => {
     dbs.length !== 0 ? (
       <Cut dbs={dbs} deleteDB={deleteDB} setDbs={setDbs} />
     ) : (
-      <NotRecord />
+      <NotRecord content={`기록이 없습니다.\n기록탭으로 가서 기록을 진행하세요!`} />
     )
   ) : (
     <CheckTime insertCheckTime={insertCheckTime} />

@@ -32,6 +32,7 @@ const Logo = styled(Link)`
 `;
 const Ul = styled.ul`
   display: flex;
+  font-size: 15px;
 `;
 const Li = styled.li`
   margin-left: 12px;
@@ -54,7 +55,9 @@ export default function Header() {
       );
       if (!userInfo) {
         clearToken(dispatch, nav);
-      } else dispatch(setToken(token));
+      } else {
+        dispatch(setToken(token, userInfo));
+      }
     }
   }
 

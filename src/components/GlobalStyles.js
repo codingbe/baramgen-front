@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
         box-sizing:border-box;
     }
     html{
-        font-family: "Do Hyeon";
+        font-family: "mabinogi";
     }
     body{
         max-width:1380px;

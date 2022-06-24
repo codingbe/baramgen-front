@@ -24,15 +24,14 @@ const Paragraph = styled.p`
   text-align: center;
   font-size: 18px;
   white-space: pre;
+  line-height: 26px;
 `;
 
-const NotRecord = ({ check }) => (
+const NotRecord = ({ content }) => (
   <Container>
     <Main>
       <Icon className="fas fa-question" />
-      <Paragraph>
-        {check ? "맵이나 아이템을 선택한 후 기록해보세요!" : `기록이 없습니다.\n기록탭으로 가서 기록을 진행하세요!`}
-      </Paragraph>
+      <Paragraph>{content}</Paragraph>
     </Main>
   </Container>
 );
