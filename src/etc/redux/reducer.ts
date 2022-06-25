@@ -22,6 +22,7 @@ const reducer = (
       if (action.page) clone.page = 0;
       else clone.page++;
       return clone;
+
     default:
       return state;
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -26,25 +26,34 @@ export default function Signin() {
   const dispatch = useDispatch();
   const route = useNavigate();
 
-  async function requestLogin(code: string) {
-    if (SERVER_URL) {
-      const { token, userInfo }: { token: string; userInfo: UserInfo } = await fetch(`${SERVER_URL}/users`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: JSON.stringify({ code }),
-      }).then((res) => res.ok && res.json());
-      dispatch(setToken(token, userInfo));
-      localStorage.setItem("token", token);
-      route("/");
-    }
-  }
+  const requestLogin = useCallback(
+    async function (code: string) {
+      if (SERVER_URL) {
+        try {
+          const { token, userInfo }: { token: string; userInfo: UserInfo } = await fetch(`${SERVER_URL}/users`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: JSON.stringify({ code }),
+          }).then((res) => res.ok && res.json());
+          dispatch(setToken(token, userInfo));
+          localStorage.setItem("token", token);
+          route("/");
+        } catch {
+          route("/");
+        }
+      }
+    },
+    [dispatch, route]
+  );
+
   useEffect(() => {
     const url = new URL(window.location.href);
     const code = url.searchParams.get("code");
     if (code) requestLogin(code);
-  }, []);
+    else route("/");
+  }, [requestLogin, route]);
   return <Container>로그인중...</Container>;
 }

@@ -14,20 +14,18 @@ const Nav = styled.nav`
 export default function CommuHeader({
   sub,
   setSub,
-  value,
   setValue,
-  getArticles,
 }: {
   sub: string;
   setSub: React.Dispatch<React.SetStateAction<string>>;
   setValue: React.Dispatch<React.SetStateAction<string>>;
-  value: string;
+
   getArticles: Function;
 }) {
   return (
     <Nav>
       <FilterHeader sub={sub} setSub={setSub} />
-      <SearchBar value={value} setValue={setValue} getArticles={getArticles} />
+      <SearchBar setValue={setValue} />
     </Nav>
   );
 }
