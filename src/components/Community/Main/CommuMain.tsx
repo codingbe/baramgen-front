@@ -1,7 +1,6 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { ArticleInfo } from "../../../etc/typeDefs";
-import Loading from "../../Loading";
 import NotRecord from "../../Record/NotRecord";
 import Card from "./Card";
 import Post from "./Post/Post";
@@ -13,7 +12,6 @@ const Container = styled.div`
 
 export default function CommuMain({
   articles,
-  loading,
   setLoading,
   setVisible,
   visible,
@@ -29,12 +27,10 @@ export default function CommuMain({
   return (
     <>
       <Container>
-        {loading ? (
-          <Loading />
-        ) : articles.length > 0 ? (
+        {articles.length > 0 ? (
           <>
             {articles.map((article, idx) => (
-              <Card article={article} key={idx} setVisible={setVisible} setArticles={setArticles} />
+              <Card article={article} key={idx} setVisible={setVisible} setArticles={setArticles} index={idx} />
             ))}
           </>
         ) : (

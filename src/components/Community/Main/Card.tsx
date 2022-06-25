@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { setArticle, setChange } from "../../../etc/redux/action";
 import { ArticleInfo, UserInfo } from "../../../etc/typeDefs";
-import { SERVER_URL, timeForToday } from "../../../etc/utils";
+import { checkCreatedAt, SERVER_URL, timeForToday } from "../../../etc/utils";
 
 const Container = styled.div`
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -48,19 +48,19 @@ export default function Card({
   article,
   setVisible,
   setArticles,
+  index,
 }: {
   article: ArticleInfo;
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
   setArticles: React.Dispatch<React.SetStateAction<ArticleInfo[]>>;
+  index: number;
 }) {
   const userInfo = useSelector((state: { userInfo: UserInfo }) => state.userInfo);
   const token = useSelector((state: { token: string }) => state.token);
   const dispatch = useDispatch();
   const [check, setCheck] = useState(false);
-  const [preCheck, setPreCheck] = useState(false);
-  const page = useSelector((state: { page: number }) => state.page);
 
-  function setState() {
+  function setStateForEdit() {
     dispatch(setArticle(article));
     setVisible(true);
   }
@@ -73,34 +73,47 @@ export default function Card({
     }).then((res) => res.ok && dispatch(setChange()));
   }
 
-  async function likeArticle(id: number) {
-    const length = Object.keys(userInfo).length;
-    if (length > 0) {
-      const data = await fetch(`${SERVER_URL}/articles/like`, {
-        method: "PATCH",
-        headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
-        body: JSON.stringify({ articleId: id }),
-      }).then((res) => res.ok && res.json());
-      setCheck(data.like);
-    } else window.alert("로그인 후 이용해주세요!");
-  }
+  const likeArticle = useCallback(
+    async function (id: number) {
+      const length = Object.keys(userInfo).length;
+      if (length > 0) {
+        const data = await fetch(`${SERVER_URL}/articles/like`, {
+          method: "PATCH",
+          headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+          body: JSON.stringify({ articleId: id }),
+        }).then((res) => res.ok && res.json());
+        setCheck(data.like);
+        setArticles((prev) => {
+          const clone = prev.slice();
+          if (data.like) clone[index].likes.push(data.likeInfo);
+          else {
+            clone[index].likes = clone[index].likes.filter((like) => userInfo.id !== like.userId);
+          }
+          return clone;
+        });
+      } else window.alert("로그인 후 이용해주세요!");
+    },
+    [index, setArticles, token, userInfo]
+  );
 
-  function checkLikeArticle() {
-    const index = article.likes.findIndex(
-      (like: { id: number; userId: number; articleId: number }) => like.userId === userInfo.id
-    );
+  const checkLikeArticle = useCallback(
+    function () {
+      const index = article.likes.findIndex(
+        (like: { id: number; userId: number; articleId: number }) => like.userId === userInfo.id
+      );
 
-    if (index !== -1) {
-      setPreCheck(true);
-      setCheck(true);
-    }
-  }
+      if (index !== -1) {
+        setCheck(true);
+      } else setCheck(false);
+    },
+    [article.likes, userInfo.id]
+  );
 
   useEffect(() => {
     const length = Object.keys(userInfo).length;
 
     if (length > 0) checkLikeArticle();
-  }, [userInfo]);
+  }, [checkLikeArticle, userInfo]);
 
   return (
     <Container>
@@ -112,7 +125,7 @@ export default function Card({
           {userInfo.id === article.userId ? (
             <>
               <Span>
-                <i className="fas fa-edit" style={{ cursor: "pointer" }} onClick={setState}></i>
+                <i className="fas fa-edit" style={{ cursor: "pointer" }} onClick={setStateForEdit}></i>
               </Span>
               <Span
                 onClick={() => {
@@ -130,18 +143,16 @@ export default function Card({
               </Span>
             )
           )}
-          <Span>{timeForToday(article.createdAt)}</Span>
+          <Span>
+            {timeForToday(article.createdAt)} {checkCreatedAt(article.createdAt, article.updatedAt)}
+          </Span>
         </ToolBox>
       </Column>
       <Content>{article.content}</Content>
       <Footer>
         <Button onClick={() => likeArticle(article.id)}>
           <Icon className="fas fa-heart" style={{ color: check ? "red" : "" }}></Icon>
-          {preCheck ? (
-            <Count>{check ? article.likes.length : article.likes.length - 1}</Count>
-          ) : (
-            <Count>{check ? article.likes.length + 1 : article.likes.length}</Count>
-          )}
+          <Count>{article.likes.length}</Count>
         </Button>
         <Button onClick={() => window.alert("공사중!")}>
           <Icon className="fas fa-comment-dots"></Icon>

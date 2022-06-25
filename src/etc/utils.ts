@@ -45,3 +45,11 @@ export const timeForToday = (value: Date) => {
     return `${year}.${month < 10 ? `0${month}` : month}.${date < 10 ? `0${date}` : date}`;
   return `${betweenTimeDay}일전`;
 };
+
+export const checkCreatedAt = (created: Date, updated: Date) => {
+  const createTime = new Date(created).getTime();
+  const updateTime = new Date(updated).getTime();
+  const result = updateTime - createTime;
+  if (result < 5) return "";
+  return " (수정됨)";
+};

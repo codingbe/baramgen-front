@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -62,17 +62,20 @@ export default function Mypage() {
   const dispatch = useDispatch();
   const nav = useNavigate();
 
-  async function getUserInfo() {
-    const { userInfo } = await fetch(`${SERVER_URL}/users`, {
-      headers: { authorization: `Bearer ${token}` },
-    }).then((res) => res.ok && res.json());
-    if (userInfo) {
-      setUserInfo(userInfo);
-      setValue("nickname", userInfo.nickname);
-    } else {
-      clearToken(dispatch, nav);
-    }
-  }
+  const getUserInfo = useCallback(
+    async function () {
+      const { userInfo } = await fetch(`${SERVER_URL}/users`, {
+        headers: { authorization: `Bearer ${token}` },
+      }).then((res) => res.ok && res.json());
+      if (userInfo) {
+        setUserInfo(userInfo);
+        setValue("nickname", userInfo.nickname);
+      } else {
+        clearToken(dispatch, nav);
+      }
+    },
+    [dispatch, nav, setValue, token]
+  );
 
   async function patchUserInfo() {
     const { nickname } = getValues();
@@ -95,7 +98,7 @@ export default function Mypage() {
 
   useEffect(() => {
     getUserInfo();
-  }, [token]);
+  }, [getUserInfo]);
 
   return userInfo ? (
     <Form
