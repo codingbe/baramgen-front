@@ -33,7 +33,7 @@ export default function SearchBar({ setValue }: { setValue: React.Dispatch<React
       <Input
         onChange={(e) => {
           const value = e.target.value;
-          const reg = /[가-하]/g;
+          const reg = /[가-힣]/g;
           if ((reg.test(value) && count % 3 === 0) || value === "") {
             setValue(value);
           }
