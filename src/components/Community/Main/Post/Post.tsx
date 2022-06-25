@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { setArticle, setChange } from "../../../../etc/redux/action";
-import { ArticleInfo, UserInfo } from "../../../../etc/typeDefs";
+import { ArticleInfo } from "../../../../etc/typeDefs";
 import { SERVER_URL } from "../../../../etc/utils";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -35,7 +35,6 @@ const Form = styled.form`
 
 export default function Post({
   setVisible,
-  setLoading,
 }: {
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
@@ -55,27 +54,23 @@ export default function Post({
 
       check = false;
     }
-
     return check;
   }
 
   async function postArticle() {
     if (validPost()) {
       setVisible(false);
-      setLoading(true);
       await fetch(`${SERVER_URL}/articles`, {
         method: "POST",
         headers: { authorization: `Bearer ${token}`, "Content-Type": "application/json" },
         body: JSON.stringify({ content, category }),
-      });
-      dispatch(setChange());
+      }).then((res) => res.ok && dispatch(setChange()));
     }
   }
 
   async function patchArticle(id: number) {
     if (validPost()) {
       setVisible(false);
-      setLoading(true);
       await fetch(`${SERVER_URL}/articles`, {
         method: "PATCH",
         headers: { authorization: `Bearer ${token}`, "Content-Type": "application/json" },
@@ -97,10 +92,11 @@ export default function Post({
       setCategory(article.category);
       setContent(article.content);
     }
+
     return () => {
       dispatch(setArticle({}));
     };
-  }, []);
+  }, [article, dispatch]);
 
   return (
     <Backdrop>

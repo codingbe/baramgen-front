@@ -5,6 +5,7 @@ export const SET_TOKEN = "SET_TOKEN";
 export const SET_CHANGE = "SET_CHANGE";
 export const SET_ARTICLE = "SET_ARTICLE";
 export const SET_PAGE = "SET_PAGE";
+export const SET_LIKE = "SET_LIKE";
 
 // actions creator functions
 export const setToken = (token: string, userInfo: UserInfo | {}) => {
@@ -32,5 +33,11 @@ export const setPage = (page?: boolean) => {
   return {
     type: SET_PAGE,
     page,
+  };
+};
+
+export const setLike = () => {
+  return {
+    type: SET_LIKE,
   };
 };

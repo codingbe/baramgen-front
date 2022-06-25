@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -47,19 +47,22 @@ export default function Header() {
   const token = useSelector((state: { token: string }) => state.token);
   const nav = useNavigate();
 
-  async function getToken() {
-    const token = localStorage.getItem("token");
-    if (token) {
-      const { userInfo } = await fetch(`${SERVER_URL}/users`, { headers: { authorization: `Bearer ${token}` } }).then(
-        (res) => res.ok && res.json()
-      );
-      if (!userInfo) {
-        clearToken(dispatch, nav);
-      } else {
-        dispatch(setToken(token, userInfo));
+  const getToken = useCallback(
+    async function () {
+      const token = localStorage.getItem("token");
+      if (token) {
+        const { userInfo } = await fetch(`${SERVER_URL}/users`, { headers: { authorization: `Bearer ${token}` } }).then(
+          (res) => res.ok && res.json()
+        );
+        if (!userInfo) {
+          clearToken(dispatch, nav);
+        } else {
+          dispatch(setToken(token, userInfo));
+        }
       }
-    }
-  }
+    },
+    [dispatch, nav]
+  );
 
   function requestLogout() {
     clearToken(dispatch, nav);
@@ -67,7 +70,7 @@ export default function Header() {
 
   useEffect(() => {
     getToken();
-  }, [token]);
+  }, [getToken]);
 
   return (
     <Container>

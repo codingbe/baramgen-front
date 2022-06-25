@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Form = styled.form`
@@ -20,22 +20,28 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default function SearchBar({
-  setValue,
-  getArticles,
-}: {
-  setValue: React.Dispatch<React.SetStateAction<string>>;
-  value: string;
-  getArticles: Function;
-}) {
+export default function SearchBar({ setValue }: { setValue: React.Dispatch<React.SetStateAction<string>> }) {
+  const [inputValue, setInputValue] = useState("");
+  const [count, setCount] = useState(0);
   return (
     <Form
       onSubmit={(e) => {
         e.preventDefault();
-        getArticles();
+        setValue(inputValue);
       }}
     >
-      <Input onChange={(e) => setValue(e.target.value)} placeholder="검색어를 입력후 엔터를 눌러주세요!" />
+      <Input
+        onChange={(e) => {
+          const value = e.target.value;
+          const reg = /[가-하]/g;
+          if ((reg.test(value) && count % 3 === 0) || value === "") {
+            setValue(value);
+          }
+          setInputValue(value);
+          setCount((prev) => prev + 1);
+        }}
+        placeholder="검색어를 입력하고 엔터를 누르세요!"
+      />
       <Button type="submit">검색</Button>
     </Form>
   );
