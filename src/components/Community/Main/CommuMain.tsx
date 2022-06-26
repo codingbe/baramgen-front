@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ArticleInfo } from "../../../etc/typeDefs";
+import Loading from "../../Loading";
 import NotRecord from "../../Record/NotRecord";
 import Card from "./Card";
 import Post from "./Post/Post";
@@ -16,6 +17,7 @@ export default function CommuMain({
   setVisible,
   visible,
   setArticles,
+  loading,
 }: {
   articles: ArticleInfo[];
   loading: boolean;
@@ -32,7 +34,10 @@ export default function CommuMain({
             {articles.map((article, idx) => (
               <Card article={article} key={idx} setVisible={setVisible} setArticles={setArticles} index={idx} />
             ))}
+            {loading && <Loading />}
           </>
+        ) : loading ? (
+          <Loading />
         ) : (
           <NotRecord content="글이 없어요!" />
         )}
