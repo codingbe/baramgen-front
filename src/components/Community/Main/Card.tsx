@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { setArticle, setChange } from "../../../etc/redux/action";
+import { setArticle, setChange, setComments } from "../../../etc/redux/action";
 import { ArticleInfo, UserInfo } from "../../../etc/typeDefs";
 import { checkCreatedAt, SERVER_URL, timeForToday } from "../../../etc/utils";
+import Comments from "../Comment/Comments";
 
 const Container = styled.div`
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -59,6 +60,7 @@ export default function Card({
   const token = useSelector((state: { token: string }) => state.token);
   const dispatch = useDispatch();
   const [check, setCheck] = useState(false);
+  const [checkComment, setCheckComment] = useState(false);
 
   function setStateForEdit() {
     dispatch(setArticle(article));
@@ -109,6 +111,17 @@ export default function Card({
     [article.likes, userInfo.id]
   );
 
+  function beforeComment() {
+    dispatch(setComments(article.comments));
+    setCheckComment(true);
+  }
+
+  useEffect(() => {
+    if (checkComment) {
+      dispatch(setComments(article.comments));
+    }
+  }, [article.comments, checkComment, dispatch]);
+
   useEffect(() => {
     const length = Object.keys(userInfo).length;
 
@@ -116,49 +129,52 @@ export default function Card({
   }, [checkLikeArticle, userInfo]);
 
   return (
-    <Container>
-      <Column>
-        <Span style={{ margin: 0 }}>
-          {article.category} 🟠 {article.user.nickname}
-        </Span>
-        <ToolBox>
-          {userInfo.id === article.userId ? (
-            <>
-              <Span>
-                <i className="fas fa-edit" style={{ cursor: "pointer" }} onClick={setStateForEdit}></i>
-              </Span>
-              <Span
-                onClick={() => {
-                  const check = window.confirm("삭제 하시겠습니까?");
-                  check && deleteArticle(article.id);
-                }}
-              >
-                <i className="fas fa-trash" style={{ cursor: "pointer" }}></i>
-              </Span>
-            </>
-          ) : (
-            userInfo.authority && (
-              <Span onClick={() => deleteArticle(article.id)}>
-                <i className="fas fa-trash" style={{ cursor: "pointer" }}></i>
-              </Span>
-            )
-          )}
-          <Span>
-            {timeForToday(article.createdAt)} {checkCreatedAt(article.createdAt, article.updatedAt)}
+    <>
+      <Container>
+        <Column>
+          <Span style={{ margin: 0 }}>
+            {article.category} 🟠 {article.user.nickname}
           </Span>
-        </ToolBox>
-      </Column>
-      <Content>{article.content}</Content>
-      <Footer>
-        <Button onClick={() => likeArticle(article.id)}>
-          <Icon className="fas fa-heart" style={{ color: check ? "red" : "" }}></Icon>
-          <Count>{article.likes.length}</Count>
-        </Button>
-        <Button onClick={() => window.alert("공사중!")}>
-          <Icon className="fas fa-comment-dots"></Icon>
-          <Count>{article.comments.length}</Count>
-        </Button>
-      </Footer>
-    </Container>
+          <ToolBox>
+            {userInfo.id === article.userId ? (
+              <>
+                <Span>
+                  <i className="fas fa-edit" style={{ cursor: "pointer" }} onClick={setStateForEdit}></i>
+                </Span>
+                <Span
+                  onClick={() => {
+                    const check = window.confirm("삭제 하시겠습니까?");
+                    check && deleteArticle(article.id);
+                  }}
+                >
+                  <i className="fas fa-trash" style={{ cursor: "pointer" }}></i>
+                </Span>
+              </>
+            ) : (
+              userInfo.authority && (
+                <Span onClick={() => deleteArticle(article.id)}>
+                  <i className="fas fa-trash" style={{ cursor: "pointer" }}></i>
+                </Span>
+              )
+            )}
+            <Span>
+              {timeForToday(article.createdAt)} {checkCreatedAt(article.createdAt, article.updatedAt)}
+            </Span>
+          </ToolBox>
+        </Column>
+        <Content>{article.content}</Content>
+        <Footer>
+          <Button onClick={() => likeArticle(article.id)}>
+            <Icon className="fas fa-heart" style={{ color: check ? "red" : "" }}></Icon>
+            <Count>{article.likes.length}</Count>
+          </Button>
+          <Button onClick={() => beforeComment()}>
+            <Icon className="fas fa-comment-dots"></Icon>
+            <Count>{article.comments.length}</Count>
+          </Button>
+        </Footer>
+      </Container>
+      {checkComment && <Comments id={article.id} setCheckComment={setCheckComment} />}
+    </>
   );
 }
