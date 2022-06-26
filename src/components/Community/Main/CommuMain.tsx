@@ -34,7 +34,6 @@ export default function CommuMain({
             {articles.map((article, idx) => (
               <Card article={article} key={idx} setVisible={setVisible} setArticles={setArticles} index={idx} />
             ))}
-            {loading && <Loading />}
           </>
         ) : loading ? (
           <Loading />
