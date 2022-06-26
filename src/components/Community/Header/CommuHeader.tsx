@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { ArticleInfo } from "../../../etc/typeDefs";
 import FilterHeader from "./FilterHeader";
 import SearchBar from "./SearchBar";
 
@@ -15,16 +16,16 @@ export default function CommuHeader({
   sub,
   setSub,
   setValue,
+  setArticles,
 }: {
   sub: string;
   setSub: React.Dispatch<React.SetStateAction<string>>;
   setValue: React.Dispatch<React.SetStateAction<string>>;
-
-  getArticles: Function;
+  setArticles: React.Dispatch<React.SetStateAction<ArticleInfo[]>>;
 }) {
   return (
     <Nav>
-      <FilterHeader sub={sub} setSub={setSub} />
+      <FilterHeader sub={sub} setSub={setSub} setArticles={setArticles} />
       <SearchBar setValue={setValue} />
     </Nav>
   );
