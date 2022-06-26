@@ -12,6 +12,10 @@ const Container = styled.div`
   height: 80vh;
   width: 100%;
   background-color: white;
+  @media screen and (max-width: 768px) {
+    height: ${`${window.innerHeight}px`};
+    top: 0;
+  }
 `;
 
 const Header = styled.div`
@@ -24,7 +28,7 @@ const Header = styled.div`
   top: 0;
   width: 100%;
   align-items: center;
-  padding: 8px;
+  padding: 20px 10px;
 `;
 
 const Span = styled.span`
