@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { setPage } from "../../../etc/redux/action";
+import { ArticleInfo } from "../../../etc/typeDefs";
 
 const Ul = styled.ul`
   display: flex;
@@ -17,18 +18,24 @@ const Li = styled.li<{ check: boolean }>`
 export default function FilterHeader({
   sub,
   setSub,
+  setArticles,
 }: {
   sub: string;
   setSub: React.Dispatch<React.SetStateAction<string>>;
+  setArticles: React.Dispatch<React.SetStateAction<ArticleInfo[]>>;
 }) {
   const dispatch = useDispatch();
+  function filterArticle(sub: string) {
+    setSub(sub);
+    setArticles([]);
+    dispatch(setPage(true));
+  }
   return (
     <Ul>
       <Li
         check={!sub}
         onClick={() => {
-          setSub("");
-          dispatch(setPage(true));
+          filterArticle("");
         }}
       >
         전체
@@ -36,8 +43,7 @@ export default function FilterHeader({
       <Li
         check={sub === "공지"}
         onClick={() => {
-          setSub("공지");
-          dispatch(setPage(true));
+          filterArticle("공지");
         }}
       >
         공지
@@ -45,8 +51,7 @@ export default function FilterHeader({
       <Li
         check={sub === "건의"}
         onClick={() => {
-          setSub("건의");
-          dispatch(setPage(true));
+          filterArticle("건의");
         }}
       >
         건의
@@ -54,8 +59,7 @@ export default function FilterHeader({
       <Li
         check={sub === "버그"}
         onClick={() => {
-          setSub("버그");
-          dispatch(setPage(true));
+          filterArticle("버그");
         }}
       >
         버그
@@ -63,8 +67,7 @@ export default function FilterHeader({
       <Li
         check={sub === "잡담"}
         onClick={() => {
-          setSub("잡담");
-          dispatch(setPage(true));
+          filterArticle("잡담");
         }}
       >
         잡담
