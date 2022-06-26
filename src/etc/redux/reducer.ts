@@ -1,10 +1,17 @@
-import { ArticleInfo, UserInfo } from "../typeDefs";
-import { SET_ARTICLE, SET_CHANGE, SET_PAGE, SET_TOKEN } from "./action";
+import { ArticleInfo, CommentInfo, UserInfo } from "../typeDefs";
+import { SET_ARTICLE, SET_CHANGE, SET_COMMENTS, SET_PAGE, SET_TOKEN } from "./action";
 import { initialState } from "./initialState";
 
 const reducer = (
   state = initialState,
-  action: { type: string; token: string; userInfo: UserInfo; article: ArticleInfo; page?: boolean }
+  action: {
+    type: string;
+    token: string;
+    userInfo: UserInfo;
+    article: ArticleInfo;
+    page?: boolean;
+    comments: CommentInfo[];
+  }
 ) => {
   const clone = Object.assign({}, state);
   switch (action.type) {
@@ -22,7 +29,9 @@ const reducer = (
       if (action.page) clone.page = 0;
       else clone.page++;
       return clone;
-
+    case SET_COMMENTS:
+      clone.comments = action.comments;
+      return clone;
     default:
       return state;
   }

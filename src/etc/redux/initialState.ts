@@ -1,4 +1,4 @@
-import { ArticleInfo, UserInfo } from "../typeDefs";
+import { ArticleInfo, CommentInfo, UserInfo } from "../typeDefs";
 
 export const initialState: {
   token: string;
@@ -6,10 +6,12 @@ export const initialState: {
   userInfo: UserInfo | {};
   article: ArticleInfo | {};
   page: number;
+  comments: CommentInfo[] | [];
 } = {
   token: "",
   change: false,
   userInfo: {},
   article: {},
   page: 0,
+  comments: [],
 };

@@ -47,26 +47,36 @@ export default function Header() {
   const token = useSelector((state: { token: string }) => state.token);
   const nav = useNavigate();
 
+  const requestLogout = useCallback(() => {
+    clearToken(dispatch, nav);
+  }, [dispatch, nav]);
+
   const getToken = useCallback(
     async function () {
       const token = localStorage.getItem("token");
       if (token) {
-        const { userInfo } = await fetch(`${SERVER_URL}/users`, { headers: { authorization: `Bearer ${token}` } }).then(
-          (res) => res.ok && res.json()
-        );
+        const { userInfo } = await fetch(`${SERVER_URL}/users`, {
+          headers: { authorization: `Bearer ${token}` },
+        }).then((res) => res.ok && res.json());
         if (!userInfo) {
-          clearToken(dispatch, nav);
+          requestLogout();
         } else {
+          const expire = localStorage.getItem("expire");
           dispatch(setToken(token, userInfo));
+          if (expire) {
+            const remain = parseInt(expire) - Date.now();
+            if (remain > 0) {
+              setTimeout(() => {
+                window.alert("로그인 유효기간이 지났습니다!\n다시 로그인 해주세요");
+                requestLogout();
+              }, remain);
+            }
+          }
         }
       }
     },
-    [dispatch, nav]
+    [dispatch, requestLogout]
   );
-
-  function requestLogout() {
-    clearToken(dispatch, nav);
-  }
 
   useEffect(() => {
     getToken();
