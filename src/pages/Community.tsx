@@ -74,7 +74,7 @@ export default function Community() {
 
   return (
     <>
-      <CommuHeader sub={sub} setSub={setSub} setValue={setValue} setArticles={setArticles} />
+      <CommuHeader sub={sub} setSub={setSub} setValue={setValue} setArticles={setArticles} setLoading={setLoading} />
       <MainHeader setVisible={setVisible} cur={cur} setCur={setCur} visible={visible} />
       <Container onScroll={infiniteScroll}>
         <CommuMain
