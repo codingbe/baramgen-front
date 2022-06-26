@@ -45,7 +45,7 @@ const Icon = styled.i`
 const Ul = styled.ul`
   overflow-y: scroll;
   height: 90%;
-  padding: 40px 10px 0 10px;
+  padding: 60px 10px 0 10px;
 `;
 
 export default function CommentList({
