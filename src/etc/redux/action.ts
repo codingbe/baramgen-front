@@ -1,4 +1,4 @@
-import { UserInfo, ArticleInfo } from "../typeDefs";
+import { UserInfo, ArticleInfo, CommentInfo } from "../typeDefs";
 
 // action types
 export const SET_TOKEN = "SET_TOKEN";
@@ -6,6 +6,7 @@ export const SET_CHANGE = "SET_CHANGE";
 export const SET_ARTICLE = "SET_ARTICLE";
 export const SET_PAGE = "SET_PAGE";
 export const SET_LIKE = "SET_LIKE";
+export const SET_COMMENTS = "SET_COMMENTS";
 
 // actions creator functions
 export const setToken = (token: string, userInfo: UserInfo | {}) => {
@@ -39,5 +40,12 @@ export const setPage = (page?: boolean) => {
 export const setLike = () => {
   return {
     type: SET_LIKE,
+  };
+};
+
+export const setComments = (comments: CommentInfo[]) => {
+  return {
+    type: SET_COMMENTS,
+    comments,
   };
 };

@@ -18,6 +18,7 @@ export const currentTime = () => {
 
 export const clearToken = (dispatch: Dispatch, nav: NavigateFunction) => {
   localStorage.removeItem("token");
+  localStorage.removeItem("expire");
   dispatch(setToken("", {}));
   nav("/");
 };
@@ -52,4 +53,17 @@ export const checkCreatedAt = (created: Date, updated: Date) => {
   const result = updateTime - createTime;
   if (result < 5) return "";
   return " (수정됨)";
+};
+
+export const createCommentTime = (time: Date) => {
+  const date = new Date(time);
+  const tempYear = date.getFullYear();
+  const tempMonth = date.getMonth() + 1;
+  const tempDate = date.getDate();
+  const tempHours = date.getHours();
+  const tempMinutes = date.getMinutes();
+  const tempSeconds = date.getSeconds();
+  return `${tempYear}.${tempMonth < 10 ? `0${tempMonth}` : tempMonth}.${tempDate < 10 ? `0${tempDate}` : tempDate} ${
+    tempHours < 10 ? `0${tempHours}` : tempHours
+  }:${tempMinutes < 10 ? `0${tempMinutes}` : tempMinutes}:${tempSeconds < 10 ? `0${tempSeconds}` : tempSeconds}`;
 };

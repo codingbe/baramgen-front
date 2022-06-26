@@ -30,16 +30,20 @@ export default function Signin() {
     async function (code: string) {
       if (SERVER_URL) {
         try {
-          const { token, userInfo }: { token: string; userInfo: UserInfo } = await fetch(`${SERVER_URL}/users`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: JSON.stringify({ code }),
-          }).then((res) => res.ok && res.json());
+          const { token, userInfo, expire }: { token: string; userInfo: UserInfo; expire: number } = await fetch(
+            `${SERVER_URL}/users`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+              },
+              body: JSON.stringify({ code }),
+            }
+          ).then((res) => res.ok && res.json());
           dispatch(setToken(token, userInfo));
           localStorage.setItem("token", token);
+          localStorage.setItem("expire", String(Date.now() + expire));
           route("/");
         } catch {
           route("/");

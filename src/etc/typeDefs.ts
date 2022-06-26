@@ -25,3 +25,14 @@ export type ArticleLikeInfo = {
   userId: number;
   articleId: number;
 };
+
+export type CommentInfo = {
+  id: number;
+  userId: number;
+  user: UserInfo;
+  articleId: number;
+  article: ArticleInfo;
+  content: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
