@@ -9,7 +9,7 @@ import CommentInput from "./CommentInput";
 const Container = styled.div`
   position: absolute;
   max-width: 450px;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   background-color: white;
 `;
