@@ -17,15 +17,17 @@ export default function CommuHeader({
   setSub,
   setValue,
   setArticles,
+  setLoading,
 }: {
   sub: string;
   setSub: React.Dispatch<React.SetStateAction<string>>;
   setValue: React.Dispatch<React.SetStateAction<string>>;
   setArticles: React.Dispatch<React.SetStateAction<ArticleInfo[]>>;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
     <Nav>
-      <FilterHeader sub={sub} setSub={setSub} setArticles={setArticles} />
+      <FilterHeader sub={sub} setSub={setSub} setArticles={setArticles} setLoading={setLoading} />
       <SearchBar setValue={setValue} />
     </Nav>
   );

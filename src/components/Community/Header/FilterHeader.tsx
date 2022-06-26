@@ -19,17 +19,21 @@ export default function FilterHeader({
   sub,
   setSub,
   setArticles,
+  setLoading,
 }: {
   sub: string;
   setSub: React.Dispatch<React.SetStateAction<string>>;
   setArticles: React.Dispatch<React.SetStateAction<ArticleInfo[]>>;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const dispatch = useDispatch();
   function filterArticle(sub: string) {
     setSub(sub);
+    setLoading(true);
     setArticles([]);
     dispatch(setPage(true));
   }
+
   return (
     <Ul>
       <Li
