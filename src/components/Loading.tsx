@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import React from "react";
 
 const Container = styled.div`
   width: 100%;
-  height: 60vh;
   display: flex;
+  height: 40vh;
   justify-content: center;
   align-items: center;
   font-size: 40px;
