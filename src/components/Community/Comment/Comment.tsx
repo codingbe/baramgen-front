@@ -6,7 +6,7 @@ import { createCommentTime, SERVER_URL } from "../../../etc/utils";
 
 const Li = styled.li`
   padding: 10px 0;
-  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
 `;
 const Header = styled.div`
   display: flex;
@@ -14,7 +14,9 @@ const Header = styled.div`
   margin-bottom: 4px;
 `;
 const HColumn = styled.div``;
-const Icon = styled.i``;
+const Icon = styled.i`
+  cursor: pointer;
+`;
 const Content = styled.p`
   white-space: pre;
   font-size: 14px;
@@ -56,7 +58,15 @@ export default function Comment({ comment }: { comment: CommentInfo }) {
         {userInfo.authority ? (
           <Icon onClick={() => deleteComment(comment.id)} className="fas fa-trash"></Icon>
         ) : (
-          userInfo.id === id && <Icon onClick={() => deleteComment(comment.id)} className="fas fa-trash"></Icon>
+          userInfo.id === id && (
+            <Icon
+              onClick={() => {
+                const check = window.confirm("댓글을 삭제하시겠습니까?");
+                check && deleteComment(comment.id);
+              }}
+              className="fas fa-trash"
+            ></Icon>
+          )
         )}
       </Header>
       <Content>{content}</Content>
