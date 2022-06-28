@@ -28,10 +28,15 @@ export default function FilterHeader({
 }) {
   const dispatch = useDispatch();
   function filterArticle(sub: string) {
-    setSub(sub);
-    setLoading(true);
-    setArticles([]);
-    dispatch(setPage(true));
+    setSub((prev) => {
+      if (prev !== sub) {
+        setLoading(true);
+        setArticles([]);
+        dispatch(setPage(true));
+        return sub;
+      }
+      return prev;
+    });
   }
 
   return (
