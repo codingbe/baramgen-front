@@ -20,7 +20,7 @@ const Container = styled.div`
 export default function Community() {
   const [sub, setSub] = useState("");
   const [articles, setArticles] = useState<ArticleInfo[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [cur, setCur] = useState("");
   const [value, setValue] = useState("");
   const type = "content";
