@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -46,6 +46,7 @@ export default function Header() {
   const dispatch = useDispatch();
   const token = useSelector((state: { token: string }) => state.token);
   const nav = useNavigate();
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>();
 
   const requestLogout = useCallback(() => {
     clearToken(dispatch, nav);
@@ -66,10 +67,11 @@ export default function Header() {
           if (expire) {
             const remain = parseInt(expire) - Date.now();
             if (remain > 0) {
-              setTimeout(() => {
+              const id = setTimeout(() => {
                 window.alert("로그인 유효기간이 지났습니다!\n다시 로그인 해주세요");
                 requestLogout();
               }, remain);
+              setTimeoutId(id);
             }
           }
         }
@@ -80,7 +82,10 @@ export default function Header() {
 
   useEffect(() => {
     getToken();
-  }, [getToken]);
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [getToken, timeoutId]);
 
   return (
     <Container>
