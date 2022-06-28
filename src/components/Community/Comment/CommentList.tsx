@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { setChange } from "../../../etc/redux/action";
@@ -6,16 +6,16 @@ import { CommentInfo } from "../../../etc/typeDefs";
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
 
-const Container = styled.div`
+const Container = styled.div<{ innerHeight: number }>`
   position: absolute;
   max-width: 450px;
-  height: 80vh;
   width: 100%;
   background-color: white;
-  @media screen and (max-width: 768px) {
-    height: ${`${window.innerHeight}px`};
-    top: 0;
-  }
+  height: ${({ innerHeight }) => `${innerHeight}px`};
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Header = styled.div`
@@ -23,9 +23,6 @@ const Header = styled.div`
   background-color: #183052;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   align-items: center;
   padding: 20px 10px;
@@ -44,8 +41,8 @@ const Icon = styled.i`
 
 const Ul = styled.ul`
   overflow-y: scroll;
-  height: 90%;
   padding: 60px 10px 0 10px;
+  height: 100%;
 `;
 
 export default function CommentList({
@@ -56,6 +53,7 @@ export default function CommentList({
   setCheckComment: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const [active, setActive] = useState(false);
+  const [innerHeight, setInnerHeight] = useState(window.innerHeight);
   const comments = useSelector((state: { comments: CommentInfo[] }) => state.comments);
   const dispatch = useDispatch();
 
@@ -63,8 +61,19 @@ export default function CommentList({
     dispatch(setChange());
   }
 
+  function getInnerHeight(e: UIEvent) {
+    setInnerHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", getInnerHeight);
+    return () => {
+      window.removeEventListener("resize", getInnerHeight);
+    };
+  }, []);
+
   return (
-    <Container>
+    <Container innerHeight={innerHeight}>
       <Header>
         <HColumn>
           <Icon className="fas fa-arrow-left" onClick={() => setCheckComment(false)}></Icon>
