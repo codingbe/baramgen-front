@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { setToken } from "../../etc/redux/action";
-import { UserInfo } from "../../etc/typeDefs";
 import { SERVER_URL } from "../../etc/utils";
 
 const Container = styled.div`
@@ -30,18 +29,16 @@ export default function Signin() {
     async function (code: string) {
       if (SERVER_URL) {
         try {
-          const { token, userInfo, expire }: { token: string; userInfo: UserInfo; expire: number } = await fetch(
-            `${SERVER_URL}/users`,
-            {
+          const { token, expire }: { token: string; expire: number } =
+            await fetch(`${SERVER_URL}/users`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
                 // 'Content-Type': 'application/x-www-form-urlencoded',
               },
               body: JSON.stringify({ code }),
-            }
-          ).then((res) => res.ok && res.json());
-          dispatch(setToken(token, userInfo));
+            }).then((res) => res.ok && res.json());
+          dispatch(setToken(token));
           localStorage.setItem("token", token);
           localStorage.setItem("expire", String(Date.now() + expire));
           route("/");

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -41,51 +41,51 @@ const Rlink = styled(Link)``;
 const Alink = styled.a``;
 
 export default function Header() {
-  const REDIRECT_URL = process.env.REACT_APP_REDIRECT_URL || "http://localhost:3000/signin";
+  const REDIRECT_URL =
+    process.env.REACT_APP_REDIRECT_URL || "http://localhost:3000/signin";
   const GOOGLE_URL = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.REACT_APP_GOOGLE_CLIENT_ID}&redirect_uri=${REDIRECT_URL}&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email`;
   const dispatch = useDispatch();
   const token = useSelector((state: { token: string }) => state.token);
   const nav = useNavigate();
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>();
 
-  const requestLogout = useCallback(() => {
+  function requestLogout() {
     clearToken(dispatch, nav);
-  }, [dispatch, nav]);
+  }
 
-  const getToken = useCallback(
-    async function () {
-      const token = localStorage.getItem("token");
-      if (token) {
-        const { userInfo } = await fetch(`${SERVER_URL}/users`, {
-          headers: { authorization: `Bearer ${token}` },
-        }).then((res) => res.ok && res.json());
-        if (!userInfo) {
-          requestLogout();
-        } else {
-          const expire = localStorage.getItem("expire");
-          dispatch(setToken(token, userInfo));
-          if (expire) {
-            const remain = parseInt(expire) - Date.now();
-            if (remain > 0) {
-              const id = setTimeout(() => {
-                window.alert("로그인 유효기간이 지났습니다!\n다시 로그인 해주세요");
-                requestLogout();
-              }, remain);
-              setTimeoutId(id);
-            }
+  async function getToken() {
+    const token = localStorage.getItem("token");
+    if (token) {
+      const { userInfo } = await fetch(`${SERVER_URL}/users`, {
+        headers: { authorization: `Bearer ${token}` },
+      }).then((res) => res.ok && res.json());
+      if (!userInfo) {
+        requestLogout();
+      } else {
+        const expire = localStorage.getItem("expire");
+        dispatch(setToken(token, userInfo));
+        if (expire) {
+          const remain = parseInt(expire) - Date.now();
+          if (remain > 0) {
+            const id = setTimeout(() => {
+              window.alert(
+                "로그인 유효기간이 지났습니다!\n다시 로그인 해주세요"
+              );
+              requestLogout();
+            }, remain);
+            setTimeoutId(id);
           }
         }
       }
-    },
-    [dispatch, requestLogout]
-  );
+    }
+  }
 
   useEffect(() => {
     getToken();
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [getToken, timeoutId]);
+  }, [token]);
 
   return (
     <Container>

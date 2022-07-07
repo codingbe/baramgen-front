@@ -9,7 +9,7 @@ export const SET_LIKE = "SET_LIKE";
 export const SET_COMMENTS = "SET_COMMENTS";
 
 // actions creator functions
-export const setToken = (token: string, userInfo: UserInfo | {}) => {
+export const setToken = (token: string, userInfo?: UserInfo | {}) => {
   return {
     type: SET_TOKEN,
     token,
